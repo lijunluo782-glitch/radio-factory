@@ -1,0 +1,108 @@
+{
+  "topic_id": "space-cosmos-001",
+  "channel": "space",
+  "program": "cosmos_odd",
+  "air_date": "2026-09-09",
+  "segments": [
+    {
+      "kind": "sting",
+      "text": "",
+      "seconds": 3.0,
+      "asset": "wed",
+      "voice": null,
+      "step": "声音标识",
+      "emotion": null
+    },
+    {
+      "kind": "announce",
+      "text": "小小航天队。今天是星期三。星期三,我们看星星。",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "开场白",
+      "emotion": "好奇开场"
+    },
+    {
+      "kind": "vo",
+      "text": "从地球开车到月球,一路不停。你猜要开多久?一小时?一天?一星期?都不对。要一直开,开满166天。160天,差不多是半年。这还是一路不停车的算法。",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "现象",
+      "emotion": "好奇开场"
+    },
+    {
+      "kind": "vo",
+      "text": "166天,到底有多久?",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "反问",
+      "emotion": "略带调侃"
+    },
+    {
+      "kind": "silence",
+      "text": "",
+      "seconds": 2.0,
+      "asset": null,
+      "voice": null,
+      "step": "留白",
+      "emotion": null
+    },
+    {
+      "kind": "vo",
+      "text": "暑假放假,一般是60天左右,166天差不多是快三个暑假。放完第一个暑假,你玩腻了。放完第二个暑假,你玩腻了两次。还剩下大半个暑假,车还在路上,月亮还没到。",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "解释",
+      "emotion": null
+    },
+    {
+      "kind": "vo",
+      "text": "你们还没到啊?",
+      "seconds": null,
+      "asset": null,
+      "voice": "crumb",
+      "step": "",
+      "emotion": "略带调侃"
+    },
+    {
+      "kind": "vo",
+      "text": "没到。你家到最近的城市,可能也就几十公里。地球到月亮,差不多是38万公里,相当于来回跑这段路一万次。下次抬头看月亮,它其实没那么近。",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "解释",
+      "emotion": null
+    },
+    {
+      "kind": "flip",
+      "text": "你以为怪的是月球很远。其实怪的是——远到开车这个词在这儿根本不管用!",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "翻转",
+      "emotion": "若有所思"
+    },
+    {
+      "kind": "retell",
+      "text": "开车去月球,要开166天,比放三个暑假还久。一直不停车才行。",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "转述句",
+      "emotion": "轻松收尾"
+    },
+    {
+      "kind": "preview",
+      "text": "明天,我们认识一个人。第一个飞上天的人,前一晚在想什么?",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "明日预告",
+      "emotion": "轻松收尾"
+    }
+  ],
+  "waived_rules": []
+}

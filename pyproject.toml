@@ -1,0 +1,16 @@
+[project]
+name = "radio-factory"
+version = "0.1.0"
+description = "儿童音频电台内容工厂:频道是配置,不是代码"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.6", "typer>=0.12", "pyyaml>=6.0", "numpy>=1.26", "rich>=13.0", "requests>=2.31"]
+
+[project.scripts]
+rf = "radio_factory.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

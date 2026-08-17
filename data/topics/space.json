@@ -1,0 +1,145 @@
+[
+  {
+    "id": "space-eat-001",
+    "channel": "space",
+    "program": "sky_life",
+    "category": "eat",
+    "title": "宇航员为什么不吃面包,改吃玉米饼?",
+    "retell": "面包会掉渣,渣渣飘起来堵住仪器或被吸进肺里,所以太空里禁止带面包",
+    "flip": "你以为怪的是不能带面包,其实怪的是——连面包渣都是\"危险品\"",
+    "analogy": "",
+    "demo": "弹一下手指,想象碎屑不落地、一直飘在你眼前打转的样子",
+    "asset": "none",
+    "status": "written",
+    "sources": [
+      "https://www.nasa.gov/history/space-station-20th-food-on-iss/",
+      "https://spacecenter.org/solving-space-tortillas/"
+    ],
+    "flags": [],
+    "air_date": "2026-09-07"
+  },
+  {
+    "id": "space-eat-002",
+    "channel": "space",
+    "program": "sky_life",
+    "category": "eat",
+    "title": "宇航员能不能喝汽水?",
+    "retell": "太空里汽水的气泡不会往上飘,喝下去打嗝会把液体一起打出来,所以不让喝",
+    "flip": "你以为怪的是没有汽水喝,其实怪的是——打嗝在天上会喷出一嘴水",
+    "analogy": "",
+    "demo": "憋住一个嗝不打出来,感觉一下那股气顶在喉咙口的感觉",
+    "asset": "none",
+    "status": "written",
+    "sources": [],
+    "flags": [],
+    "air_date": "2026-09-14"
+  },
+  {
+    "id": "space-eat-003",
+    "channel": "space",
+    "program": "sky_life",
+    "category": "eat",
+    "title": "宇航员的盐和胡椒粉去哪了?",
+    "retell": "盐粒胡椒粒会飘起来钻进眼睛和仪器缝里,所以太空里的调料都做成了液体",
+    "flip": "你以为怪的是没味道,其实怪的是——连一粒盐都能变成\"太空垃圾\"",
+    "analogy": "",
+    "demo": "捏起一小撮盐,想象它不落进碗里、飘着钻进你眼睛的样子",
+    "asset": "none",
+    "status": "written",
+    "sources": [],
+    "flags": [],
+    "air_date": "2026-09-21"
+  },
+  {
+    "id": "space-eat-004",
+    "channel": "space",
+    "program": "sky_life",
+    "category": "eat",
+    "title": "宇航员为什么爱吃辣?",
+    "retell": "在天上鼻子会像感冒一样闻不出味道,所以宇航员都爱带辣椒酱上天",
+    "flip": "你以为怪的是食堂难吃,其实怪的是——不是厨师的问题,是鼻子被\"糊住\"了",
+    "analogy": "",
+    "demo": "捏住鼻子尝一口手边的水,感觉一下味道是不是突然变淡了",
+    "asset": "none",
+    "status": "written",
+    "sources": [],
+    "flags": [],
+    "air_date": "2026-09-28"
+  },
+  {
+    "id": "space-lab-001",
+    "channel": "space",
+    "program": "lab",
+    "category": "snd_none",
+    "title": "在太空舱外,宇航员对着你大喊,你能听见吗?",
+    "retell": "太空舱外没有空气,声音传不出去,宇航员在舱外只能靠无线电说话,不能大喊大叫",
+    "flip": "你以为怪的是听不见,其实怪的是——不是喊得不够大声,是根本没有路能让声音走",
+    "analogy": "",
+    "demo": "捂住耳朵大喊一声,感觉喉咙在震,但声音被你自己挡住的样子",
+    "asset": "none",
+    "status": "written",
+    "sources": [
+      "https://www.nasa.gov/centers-and-facilities/johnson/spacewalk-spacesuit-basics/",
+      "https://www.scienceabc.com/nature/universe/how-has-nasa-recorded-sound-if-sound-cannot-travel-in-space"
+    ],
+    "flags": [],
+    "air_date": "2026-09-08"
+  },
+  {
+    "id": "space-cosmos-001",
+    "channel": "space",
+    "program": "cosmos_odd",
+    "category": "scale",
+    "title": "如果开车去月球,要开多久?",
+    "retell": "开车去月球一直不停车,要开166天,比放三个暑假还久",
+    "flip": "你以为怪的是月球很远,其实怪的是——远到开车这个词在这儿根本不管用",
+    "analogy": "",
+    "demo": "想象连续开车看:1天、2天,一直数到160天,数到你自己都数不动",
+    "asset": "none",
+    "status": "written",
+    "sources": [
+      "https://www.sciencefocus.com/space/if-you-could-drive-a-car-upwards-at-60mph-how-long-would-it-take-to-get-to-the-moon",
+      "https://www.space.com/how-long-does-it-take-to-get-to-the-moon"
+    ],
+    "flags": [],
+    "air_date": "2026-09-09"
+  },
+  {
+    "id": "space-flyers-001",
+    "channel": "space",
+    "program": "flyers",
+    "category": "first",
+    "title": "第一个要上天的人,发射前一晚在想什么?",
+    "retell": "第一个上天的人,发射前一晚睡没睡着,连历史学家都说不准,但他照样准时出发了",
+    "flip": "你以为怪的是他不紧张,其实怪的是——连他睡没睡着,我们到今天都还不确定",
+    "analogy": "",
+    "demo": "闭上眼睛,想象明天要做一件从没人做过的事,你今晚睡不睡得着",
+    "asset": "none",
+    "status": "written",
+    "sources": [
+      "https://www.esa.int/About_Us/50_years_of_ESA/50_years_of_humans_in_space/The_flight_of_Vostok_1",
+      "https://armaghplanet.com/vostok-1-secrets-of-the-first-spaceflight.html"
+    ],
+    "flags": [],
+    "air_date": "2026-09-10"
+  },
+  {
+    "id": "space-howfly-001",
+    "channel": "space",
+    "program": "how_fly",
+    "category": "rocket",
+    "title": "火箭在天上没有地面可以蹬,怎么往前飞?",
+    "retell": "火箭不是蹬地面飞起来的,是自己往后扔东西,靠反作用力往前冲",
+    "flip": "你以为怪的是没有地面蹬,其实怪的是——它压根不需要蹬,自己扔自己就能往前",
+    "analogy": "",
+    "demo": "坐在带轮子的椅子上,用力把一本书往前扔出去,感觉椅子往后退的样子",
+    "asset": "none",
+    "status": "written",
+    "sources": [
+      "https://www.nasa.gov/wp-content/uploads/2018/03/stemonstrations_newtons-third-law.pdf",
+      "https://spacecenter.org/science-in-action-newtons-third-law-of-motion/"
+    ],
+    "flags": [],
+    "air_date": "2026-09-11"
+  }
+]

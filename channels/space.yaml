@@ -1,0 +1,316 @@
+id: space
+name: 小小航天队
+audience: "6-12"
+open_line: "{channel}。今天是{weekday}。"
+epoch: 2026-09-07        # 必须是周一,作为轮换第 0 周
+rotation_weeks: 3
+
+# ---------------------------------------------------------------- 节目固定骨架
+structure:
+  - name: 声音标识
+    seconds: 3
+    note: 每天固定,孩子先认出声音再认出名字
+  - name: 开场白
+    seconds: 10
+    note: 频道名 + 今天星期几 + 领域宣告。一年不变
+  - name: 现象
+    seconds: 40
+    note: 只给现象,不解释
+  - name: 反问
+    seconds: 10
+    note: 问完必须留白
+  - name: 留白
+    seconds: 2
+    note: 给孩子自己猜的时间
+  - name: 解释
+    seconds: 90
+    note: 只用孩子每天做的动作打比方
+  - name: 翻转
+    seconds: 30
+    note: 怪的不是那里,是这里
+  - name: 转述句
+    seconds: 15
+    note: 明天可以讲给同学听的一句
+  - name: 明日预告
+    seconds: 10
+    note: 每期都做,触达率 100%
+
+# ---------------------------------------------------------------- 声音标识
+stings:
+  - id: mon
+    kind: ambient
+    duration_s: 3.0
+    params: {base: 90.0, wobble: 0.6}
+    note: 舱内环境音,低频嗡嗡
+  - id: tue
+    kind: sweep
+    duration_s: 3.0
+    params: {f0: 180.0, f1: 2000.0}
+    note: 从低到高的扫频。缓升,不从高频直接开始
+  - id: wed
+    kind: bells
+    duration_s: 3.0
+    params: {decay: 6.0}
+    note: 一串清脆的高音铃
+  - id: thu
+    kind: noise
+    duration_s: 3.0
+    params: {kind: brown, lowpass: 0.12}
+    note: 无线电电流杂音
+  - id: fri
+    kind: metal
+    duration_s: 3.0
+    params: {strikes: 3, f: 1200.0}
+    note: 金属敲击 + 倒计时感
+  - id: sat
+    kind: pulse
+    duration_s: 3.0
+    params: {bpm: 100.0, f: 660.0}
+    note: 五声,对应五件事
+
+# ---------------------------------------------------------------- 排播
+slots:
+  - weekday: 1
+    domain: 人在太空 · 生存
+    announce: "星期一,我们说说天上的日子。"
+    sting: mon
+    duration_min: 3.5
+    mode: fixed
+    programs:
+      - id: sky_life
+        name: 天上的日子
+        categories:
+          - {id: eat, name: 吃, target_pool: 12, example: 面包为什么不能带}
+          - {id: wash, name: 洗, target_pool: 10, example: 洗头用不用冲的}
+          - {id: sleep, name: 睡, target_pool: 8, example: 睡袋要绑在墙上}
+          - {id: move, name: 动, target_pool: 6, example: 跑步机要把自己绑上去}
+          - {id: body, name: 身体的变化, target_pool: 14, example: 长高两厘米回来又缩回去}
+          - {id: livable, name: 那里能住人吗, target_pool: 20, example: 火星能住人吗}
+          - {id: earth_ref, name: 地球极端环境对照, target_pool: 18, example: 南极科考站怎么洗澡}
+          - {id: cargo, name: 带上去的东西, target_pool: 22, example: 蜘蛛在失重里怎么结网}
+          - {id: timesense, name: 时间感, target_pool: 10, example: 一天看 16 次日出}
+
+  - weekday: 2
+    domain: 物理 · 可演示
+    announce: "星期二,我们做个实验。"
+    sting: tue
+    duration_min: 3.0
+    mode: fixed
+    programs:
+      - id: lab
+        name: 太空实验室
+        categories:
+          - {id: snd_none, name: 声音·发不出来, target_pool: 10, example: 真空里叫不出声}
+          - {id: snd_medium, name: 声音·传得不一样, target_pool: 14, example: 火星上听不见鸟叫}
+          - {id: snd_loud, name: 声音·人造的巨响, target_pool: 12, example: 发射台的水是消音的}
+          - {id: snd_fake, name: 声音·不是声音的声音, target_pool: 10, example: 木星闪电是电波翻译}
+          - {id: snd_ear, name: 声音·你的耳朵, target_pool: 14, example: 为什么浴室里唱歌好听}
+          - {id: light_dark, name: 光·为什么天是黑的, target_pool: 8}
+          - {id: light_color, name: 光·颜色从哪来, target_pool: 10, example: 火星为什么是红的}
+          - {id: light_invis, name: 光·看不见的光, target_pool: 10}
+          - {id: light_tele, name: 光·望远镜, target_pool: 10, example: 哈勃的近视}
+          - {id: force_fall, name: 力·掉不下去, target_pool: 12, example: 火焰是一个球}
+          - {id: force_zero, name: 力·失重是什么, target_pool: 8, example: 不是没重力是一直在掉}
+          - {id: force_react, name: 力·反作用与惯性, target_pool: 10}
+          - {id: force_orbit, name: 力·轨道与潮汐, target_pool: 12}
+          - {id: heat, name: 热, target_pool: 20, example: 真空是最好的保温瓶}
+
+  - weekday: 3
+    domain: 天文 · 天体
+    announce: "星期三,我们看星星。"
+    sting: wed
+    duration_min: 3.5
+    mode: fixed
+    programs:
+      - id: cosmos_odd
+        name: 宇宙怪事
+        categories:
+          - {id: scale, name: 尺度崩坏, target_pool: 18, example: 到月球开车 160 天}
+          - {id: density, name: 密度与质量, target_pool: 10, example: 土星能浮在水上}
+          - {id: time_odd, name: 时间反常, target_pool: 10, example: 金星一天比一年长}
+          - {id: empty, name: 空得吓人, target_pool: 8}
+          - {id: weather, name: 极端天气, target_pool: 12, example: 木星红点刮了几百年}
+          - {id: rollcall, name: 逐个报到, target_pool: 30, example: 今天木卫二来报到}
+          - {id: small_body, name: 小天体与边界, target_pool: 12}
+          - {id: sun, name: 太阳, target_pool: 8}
+          - {id: misnomer, name: 词的误会, target_pool: 8, example: 光年不是时间}
+          - {id: unknown, name: 还不知道的, target_pool: 8}
+
+  - weekday: 4
+    domain: 人物 · 历史
+    announce: "星期四,我们认识一个人。"
+    sting: thu
+    duration_min: 4.0
+    mode: rotate
+    programs:
+      - id: flyers
+        name: 飞上去的人
+        tagline: "今天,他要飞上去了。"
+        categories:
+          - {id: first, name: 第一次, target_pool: 10}
+          - {id: minutes, name: 关键几分钟, target_pool: 8}
+          - {id: cn, name: 中国的那些天, target_pool: 10}
+          - {id: crisis, name: 险情与返回, target_pool: 6}
+          - {id: training, name: 训练的日子, target_pool: 8}
+          - {id: after, name: 回来之后, target_pool: 6}
+      - id: ground
+        name: 地上的人
+        tagline: "今天这个人,一辈子没上过天。"
+        categories:
+          - {id: orbit_calc, name: 算轨道的人, target_pool: 6}
+          - {id: control, name: 控制中心, target_pool: 6}
+          - {id: tailor, name: 做衣服的人, target_pool: 4}
+          - {id: engine, name: 造发动机的人, target_pool: 5}
+          - {id: recovery, name: 找落点的人, target_pool: 4}
+          - {id: nogo, name: 说不的人, target_pool: 5}
+          - {id: repair, name: 修东西的人, target_pool: 6}
+      - id: howknow
+        name: 我们怎么知道的
+        tagline: "今天的问题是 —— 他们是怎么知道的?"
+        categories:
+          - {id: measure, name: 怎么量, target_pool: 8}
+          - {id: observe, name: 怎么看, target_pool: 6}
+          - {id: compute, name: 怎么算, target_pool: 6, example: 海王星是先算出来才看到的}
+          - {id: wrong, name: 猜错过什么, target_pool: 8}
+          - {id: verify, name: 怎么验证, target_pool: 5}
+          - {id: debate, name: 现在还在争, target_pool: 5}
+
+  - weekday: 5
+    domain: 火箭 · 工程
+    announce: "星期五,我们拆开一样东西。"
+    sting: fri
+    duration_min: 3.5
+    mode: rotate
+    programs:
+      - id: how_fly
+        name: 飞起来的秘密
+        tagline: "今天说说,它凭什么飞得起来。"
+        categories:
+          - {id: rocket, name: 火箭怎么飞, target_pool: 8, example: 它推的是自己扔出去的东西}
+          - {id: staging, name: 为什么分级, target_pool: 5}
+          - {id: plane, name: 飞机怎么飞, target_pool: 8}
+          - {id: reentry, name: 怎么回来, target_pool: 8}
+          - {id: orbit, name: 怎么不掉下来, target_pool: 6}
+          - {id: nav, name: 怎么找路, target_pool: 6}
+      - id: teardown
+        name: 拆开一个火箭
+        tagline: "今天,我们拆一个零件。"
+        categories:
+          - {id: struct, name: 结构件, target_pool: 8, example: 壳薄到不打气会自己塌}
+          - {id: power, name: 动力, target_pool: 8}
+          - {id: fuel, name: 燃料, target_pool: 6}
+          - {id: control_sys, name: 控制, target_pool: 5}
+          - {id: separation, name: 分离, target_pool: 4}
+          - {id: pad, name: 地面设施, target_pool: 6}
+          - {id: suit, name: 穿在身上的, target_pool: 6}
+      - id: fixed_it
+        name: 他们怎么修好的
+        tagline: "今天,出了一点问题。"
+        categories:
+          - {id: improvise, name: 临场救急, target_pool: 6}
+          - {id: retrofit, name: 事后修复, target_pool: 5}
+          - {id: detour, name: 设计弯路, target_pool: 6}
+          - {id: lesson, name: 试出来的经验, target_pool: 6}
+          - {id: stop, name: 停下来的决定, target_pool: 4}
+          - {id: spinoff, name: 意外的收获, target_pool: 6}
+
+  - weekday: 6
+    domain: 清点 + 暗号 + 预告
+    announce: "这一周,你记住了几件?"
+    sting: sat
+    duration_min: 4.0
+    mode: recap
+    programs:
+      - id: five_things
+        name: 本周五件事
+        categories:
+          - {id: recap, name: 五件事浓缩, target_pool: 0}
+
+  - weekday: 7
+    domain: 留空 · 自由收听
+    mode: "off"
+    programs: []
+
+# ---------------------------------------------------------------- 情绪/音色映射
+# step 名 -> TTS 情绪标签。skeleton() 生成脚本时按这张表自动填 Segment.emotion,
+# 缺省用 script.py 里的 DEFAULT_EMOTION_BY_STEP 通用基线,这里只需要写"跟通用基线不一样"的行。
+# 全量列出是为了这个频道方便核对;删掉某一行不会报错,会退回默认值。
+emotion_map:
+  开场白: 好奇开场
+  现象: 好奇开场
+  反问: 略带调侃
+  解释: 展开分析
+  翻转: 若有所思
+  转述句: 轻松收尾
+  明日预告: 轻松收尾
+
+# ---------------------------------------------------------------- 质检
+qc:
+  - id: dur
+    kind: duration
+    severity: error
+    params: {min_s: 0, max_s: 480}
+    note: 最长 8 分钟,不设下限——时长跟着内容走,别为了凑时长注水
+  - id: sent
+    kind: max_sentence_len
+    severity: error
+    params: {chars: 28}
+    note: 音频稿的句子必须念得完
+  - id: jargon
+    kind: forbid_terms
+    severity: error
+    params:
+      terms: [微重力, 对流, 表面张力, 比冲, 烧蚀, 多普勒, 洛希极限]
+      allow_after_s: 150
+    note: 术语一律后置,前 150 秒不许出现
+  - id: need_flip
+    kind: require_segment
+    severity: error
+    params: {kind: flip, min_count: 1}
+    note: 没有翻转就是一节课
+  - id: need_retell
+    kind: require_segment
+    severity: error
+    params: {kind: retell, min_count: 1}
+  - id: need_preview
+    kind: require_segment
+    severity: error
+    params: {kind: preview, min_count: 1}
+    note: 每期都要预告明天
+  - id: shell
+    kind: shell_ratio
+    severity: warn
+    params: {max_ratio: 0.18}
+  - id: hook
+    kind: hook_before
+    severity: error
+    params: {seconds: 25}
+  - id: silence
+    kind: silence_designed
+    severity: warn
+    params: {min_total_s: 1.5}
+  - id: anchor
+    kind: number_anchor
+    severity: warn
+    params: {}
+  - id: safety
+    kind: audio_safety
+    severity: error
+    params: {max_high_freq_s: 5.0}
+  - id: honesty
+    kind: honesty_flag
+    severity: error
+    params: {}
+
+# ---------------------------------------------------------------- 红线
+redlines:
+  - 术语一律后置,或干脆不出现
+  - 数字后面必须跟一个身体能感觉的参照
+  - 不确定的说"我们还不知道",不许圆
+  - 不写事故的伤亡细节
+  - 不涉政治冲突与太空军事化
+  - 动手环节不涉及火、化学品、高处、小零件
+  - 声化数据必须声明是"翻译过来的声音",不能说成"那里的声音"
+  - 全局音量上限硬编码,高频演示单次不超过 5 秒
+  - 只用公有领域纯音轨,带配乐的成品一律不用
+  - 机构徽标一律不碰,宣传物料不得暗示背书

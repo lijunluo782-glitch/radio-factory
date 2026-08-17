@@ -1,0 +1,90 @@
+{
+  "topic_id": "",
+  "channel": "space",
+  "program": "five_things",
+  "air_date": "2026-09-12",
+  "segments": [
+    {
+      "kind": "sting",
+      "text": "",
+      "seconds": 3.0,
+      "asset": "sat",
+      "voice": null,
+      "step": "声音标识",
+      "emotion": null
+    },
+    {
+      "kind": "announce",
+      "text": "小小航天队。今天是星期六。这一周,你记住了几件?",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "开场白",
+      "emotion": "好奇开场"
+    },
+    {
+      "kind": "vo",
+      "text": "这一周,我们说了五件怪事。面包渣。听不见的喊声。160天的月球路。睡得着的宇航员。自己扔自己的火箭。你还记得几件?我们来考考你。",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "现象",
+      "emotion": "好奇开场"
+    },
+    {
+      "kind": "vo",
+      "text": "准备好了吗?",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "反问",
+      "emotion": "略带调侃"
+    },
+    {
+      "kind": "silence",
+      "text": "",
+      "seconds": 2.0,
+      "asset": null,
+      "voice": null,
+      "step": "留白",
+      "emotion": null
+    },
+    {
+      "kind": "vo",
+      "text": "第一件:太空舱里,一粒面包渣,为什么比一整块面包还危险?第二件:太空舱外,你冲着同伴大喊,为什么他听不见?第三件:开车去月球,为什么要开满160天?第四件:第一个要上天的人,发射前一晚,为什么睡得特别香?第五件:火箭在天上没有地面可以蹬,它是怎么飞起来的?五件事,你答对了几件?答不上来也没关系。这一周的节目,随时可以回去再听一遍。每一件,你都可以去问问家里人。说不定连他们都答不上来。",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "解释",
+      "emotion": "展开分析"
+    },
+    {
+      "kind": "flip",
+      "text": "你以为怪事都发生在天上。其实怪的是——这些事,天天都在你脑子里飘着,你都没发现。",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "翻转",
+      "emotion": "若有所思"
+    },
+    {
+      "kind": "retell",
+      "text": "这一周的五件怪事,随便挑一件讲给朋友听。保准他们都要问你真的假的。",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "转述句",
+      "emotion": "轻松收尾"
+    },
+    {
+      "kind": "preview",
+      "text": "明天是留白的一天,你可以自己挑点声音听。下周一,我们接着挖新的怪事。",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "明日预告",
+      "emotion": "轻松收尾"
+    }
+  ],
+  "waived_rules": []
+}

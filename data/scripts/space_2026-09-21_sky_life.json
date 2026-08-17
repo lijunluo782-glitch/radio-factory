@@ -1,0 +1,86 @@
+{
+  "topic_id": "space-eat-003",
+  "channel": "space",
+  "program": "sky_life",
+  "air_date": "2026-09-21",
+  "segments": [
+    {
+      "kind": "sting",
+      "text": "",
+      "seconds": 3.0,
+      "asset": "mon",
+      "voice": null
+    },
+    {
+      "kind": "announce",
+      "text": "小小航天队。今天是星期一。星期一,我们说说天上的日子。",
+      "seconds": null,
+      "asset": null,
+      "voice": null
+    },
+    {
+      "kind": "vo",
+      "text": "打开太空厨房的调料架,你会愣住。没有盐瓶,没有胡椒罐,一个都没有。取而代之的,是一排挤压瓶,装着黏糊糊的液体。贴着盐味和胡椒味的标签。这些液体,才是宇航员真正用的调料。固体盐和胡椒粉,在天上是彻头彻尾的违禁品。",
+      "seconds": null,
+      "asset": null,
+      "voice": null
+    },
+    {
+      "kind": "vo",
+      "text": "调料瓶,怎么就成了太空违禁品?",
+      "seconds": null,
+      "asset": null,
+      "voice": null
+    },
+    {
+      "kind": "silence",
+      "text": "",
+      "seconds": 2.0,
+      "asset": null,
+      "voice": null
+    },
+    {
+      "kind": "vo",
+      "text": "我们来拆开一支太空调料瓶,看看里面藏着什么秘密。第一层,是瓶身——软软的塑料,一捏就出料,不用倒。为什么不能倒?因为固体的盐粒,一旦撒出来,就飘在空中,不会落进碗里。飘着的盐粒,专挑麻烦的地方钻。钻进眼睛,痒得你直揉。钻进精密仪器的缝隙,可能让开关卡住。这跟你把一把沙子扬到空中,沙子不落地、反而钻你眼睛。是同一个麻烦。第二层,是瓶口——特意做得很细,一次只挤出一小滴。这一滴,黏糊糊的,沾在食物上就不会飘走。第三层,才是真正的调料。盐、胡椒,统统被溶进了黏稠的液体里。",
+      "seconds": null,
+      "asset": null,
+      "voice": null
+    },
+    {
+      "kind": "vo",
+      "text": "谁要被泡成水!我本来好好的!",
+      "seconds": null,
+      "asset": null,
+      "voice": "salt"
+    },
+    {
+      "kind": "vo",
+      "text": "没办法,谁让你一撒手就到处乱飞。这样一来,再也不会有一粒盐,变成到处乱飞的太空垃圾。",
+      "seconds": null,
+      "asset": null,
+      "voice": null
+    },
+    {
+      "kind": "flip",
+      "text": "你以为怪的是没味道。其实怪的是——连一粒盐,都能变成太空垃圾!",
+      "seconds": null,
+      "asset": null,
+      "voice": null
+    },
+    {
+      "kind": "retell",
+      "text": "盐粒胡椒粒会飘起来钻进眼睛和仪器缝里。所以太空里的调料都做成了液体。",
+      "seconds": null,
+      "asset": null,
+      "voice": null
+    },
+    {
+      "kind": "preview",
+      "text": "明天,我们做个实验:为什么火星看起来是红色的?",
+      "seconds": null,
+      "asset": null,
+      "voice": null
+    }
+  ],
+  "waived_rules": []
+}

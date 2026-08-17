@@ -1,0 +1,108 @@
+{
+  "topic_id": "space-lab-001",
+  "channel": "space",
+  "program": "lab",
+  "air_date": "2026-09-08",
+  "segments": [
+    {
+      "kind": "sting",
+      "text": "",
+      "seconds": 3.0,
+      "asset": "tue",
+      "voice": null,
+      "step": "声音标识",
+      "emotion": null
+    },
+    {
+      "kind": "announce",
+      "text": "小小航天队。今天是星期二。星期二,我们做个实验。",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "开场白",
+      "emotion": "好奇开场"
+    },
+    {
+      "kind": "vo",
+      "text": "宇航员飘在太空舱外,做舱外维修。同伴在舱内,对着他大喊一声。声音,一点没传出去。哪怕贴着舱壁喊,外面的宇航员也听不见。两个人明明离得很近,却像隔着一堵永远打不穿的墙。这堵墙,不是舱壁做的。",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "现象",
+      "emotion": "好奇开场"
+    },
+    {
+      "kind": "vo",
+      "text": "声音,到底去哪儿了?",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "反问",
+      "emotion": "略带调侃"
+    },
+    {
+      "kind": "silence",
+      "text": "",
+      "seconds": 2.0,
+      "asset": null,
+      "voice": null,
+      "step": "留白",
+      "emotion": null
+    },
+    {
+      "kind": "vo",
+      "text": "在家里,你喊一嗓子。声音靠空气一路传过去,撞进耳朵里,你才能听见。空气就像一串多米诺骨牌,一个撞一个,把声音传下去。太空舱外,没有空气。没有多米诺骨牌,声音刚喊出口,就没有下一张牌可以撞了。喊得再大声也没用——声音根本走不出你的嘴。",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "解释",
+      "emotion": null
+    },
+    {
+      "kind": "vo",
+      "text": "别喊了,我压根走不出去!",
+      "seconds": null,
+      "asset": null,
+      "voice": "bubble",
+      "step": "",
+      "emotion": "略带调侃"
+    },
+    {
+      "kind": "vo",
+      "text": "所以宇航员在舱外维修,靠的不是喊,是无线电。无线电信号不需要空气,能一路传到耳机里。这时候,喊话没用,说话才管用。",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "解释",
+      "emotion": null
+    },
+    {
+      "kind": "flip",
+      "text": "你以为怪的是听不见。其实怪的是——不是喊得不够大声,是根本没有路能让声音走。",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "翻转",
+      "emotion": "若有所思"
+    },
+    {
+      "kind": "retell",
+      "text": "太空舱外没有空气,声音传不出去。宇航员在舱外只能靠无线电说话,不能大喊大叫。",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "转述句",
+      "emotion": "轻松收尾"
+    },
+    {
+      "kind": "preview",
+      "text": "明天,我们算一算:开车去月球,要开多久?",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "明日预告",
+      "emotion": "轻松收尾"
+    }
+  ],
+  "waived_rules": []
+}

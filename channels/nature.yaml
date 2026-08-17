@@ -1,0 +1,252 @@
+# 示例频道 —— 证明同一套框架能跑第二个方向。
+#
+# 和航天频道的差异,全部落在配置里,没有一行代码改动:
+#   1. 结构多了"模仿一下"这一步(动物动作可以用身体做,航天不行)
+#   2. 翻转句式不同:航天是"怪的不是那里,是这里",
+#      动植物是"我们身上也有一样的东西"
+#   3. 多了两条频道特有质检:禁拟人化、禁接触引导
+#   4. 术语表完全不同
+#   5. 周日不留空,改成"听一段声音"(自然录音门槛低于太空档案)
+
+id: nature
+name: 小小观察队
+audience: "6-12"
+open_line: "{channel}。今天是{weekday}。"
+epoch: 2026-09-07
+rotation_weeks: 3
+
+structure:
+  - name: 声音标识
+    seconds: 3
+  - name: 开场白
+    seconds: 10
+  - name: 现象
+    seconds: 40
+    note: 只给现象,不解释
+  - name: 反问
+    seconds: 10
+  - name: 留白
+    seconds: 2
+  - name: 解释
+    seconds: 80
+  - name: 模仿一下
+    seconds: 20
+    note: 用身体模仿动物的动作 —— 这一步是本频道独有的
+  - name: 翻转
+    seconds: 25
+    note: 我们身上也有一样的东西
+  - name: 转述句
+    seconds: 15
+  - name: 明日预告
+    seconds: 10
+
+stings:
+  - id: mon
+    kind: chime
+    duration_s: 3.0
+    params: {f: 740.0}
+  - id: tue
+    kind: bells
+    duration_s: 3.0
+    params: {notes: [392.0, 523.25, 659.25], decay: 5.0}
+  - id: wed
+    kind: ambient
+    duration_s: 3.0
+    params: {base: 140.0, wobble: 1.2}
+  - id: thu
+    kind: pulse
+    duration_s: 3.0
+    params: {bpm: 140.0, f: 880.0}
+  - id: fri
+    kind: noise
+    duration_s: 3.0
+    params: {kind: brown, lowpass: 0.2}
+  - id: sat
+    kind: metal
+    duration_s: 3.0
+    params: {strikes: 5, f: 900.0}
+
+slots:
+  - weekday: 1
+    domain: 本领
+    announce: "星期一,我们看一个本领。"
+    sting: mon
+    duration_min: 3.5
+    mode: fixed
+    programs:
+      - id: skills
+        name: 它有一手
+        categories:
+          - {id: speed, name: 快与慢, target_pool: 14}
+          - {id: sense, name: 感官, target_pool: 20, example: 蝙蝠靠耳朵看路}
+          - {id: defense, name: 保命的办法, target_pool: 18}
+          - {id: build, name: 会盖房子的, target_pool: 14}
+          - {id: extreme, name: 活在最难的地方, target_pool: 16}
+
+  - weekday: 2
+    domain: 身体 · 可演示
+    announce: "星期二,我们做个实验。"
+    sting: tue
+    duration_min: 3.0
+    mode: fixed
+    programs:
+      - id: body_lab
+        name: 身体实验室
+        categories:
+          - {id: ear, name: 耳朵, target_pool: 16}
+          - {id: eye, name: 眼睛, target_pool: 16}
+          - {id: nose, name: 鼻子和舌头, target_pool: 12}
+          - {id: skin, name: 皮肤和手, target_pool: 12}
+          - {id: balance, name: 平衡, target_pool: 10}
+
+  - weekday: 3
+    domain: 植物
+    announce: "星期三,我们看一棵植物。"
+    sting: wed
+    duration_min: 3.5
+    mode: fixed
+    programs:
+      - id: plants
+        name: 植物怪事
+        categories:
+          - {id: move, name: 会动的植物, target_pool: 14}
+          - {id: eat_p, name: 吃虫子的, target_pool: 8}
+          - {id: talk, name: 植物之间, target_pool: 12}
+          - {id: seed, name: 种子怎么旅行, target_pool: 14}
+          - {id: big, name: 长得离谱的, target_pool: 12}
+
+  - weekday: 4
+    domain: 关系
+    announce: "星期四,我们看两种生物。"
+    sting: thu
+    duration_min: 4.0
+    mode: rotate
+    programs:
+      - id: partners
+        name: 它们是搭档
+        tagline: "今天这两个,谁也离不开谁。"
+        categories:
+          - {id: mutual, name: 互相帮忙, target_pool: 16}
+          - {id: clean, name: 清洁工, target_pool: 10}
+      - id: rivals
+        name: 它们是对手
+        tagline: "今天这两个,斗了几百万年。"
+        categories:
+          - {id: arms, name: 军备竞赛, target_pool: 16}
+          - {id: mimic, name: 装成别人, target_pool: 12}
+      - id: humans
+        name: 我们和它们
+        tagline: "今天说说,它和你有什么关系。"
+        categories:
+          - {id: city, name: 住进城市的, target_pool: 12}
+          - {id: gone, name: 已经没有了的, target_pool: 10}
+
+  - weekday: 5
+    domain: 观察方法
+    announce: "星期五,我们学一招。"
+    sting: fri
+    duration_min: 3.5
+    mode: rotate
+    programs:
+      - id: howknow_n
+        name: 我们怎么知道的
+        tagline: "今天的问题是 —— 他们怎么查出来的?"
+        categories:
+          - {id: track, name: 怎么跟踪, target_pool: 12}
+          - {id: count, name: 怎么数得清, target_pool: 10}
+      - id: field
+        name: 出门看看
+        tagline: "今天,你自己也能看见。"
+        categories:
+          - {id: window, name: 窗外就有, target_pool: 16}
+          - {id: park, name: 公园里的, target_pool: 14}
+      - id: tools_n
+        name: 他们的工具
+        tagline: "今天说说,他们用什么看。"
+        categories:
+          - {id: cam, name: 红外和夜视, target_pool: 10}
+          - {id: mic, name: 录声音的, target_pool: 10}
+
+  - weekday: 6
+    domain: 清点 + 暗号 + 预告
+    announce: "这一周,你记住了几件?"
+    sting: sat
+    duration_min: 4.0
+    mode: recap
+    programs:
+      - id: five_things_n
+        name: 本周五件事
+        categories:
+          - {id: recap, name: 五件事浓缩, target_pool: 0}
+
+  - weekday: 7
+    domain: 留空 · 自由收听
+    mode: "off"
+    programs: []
+
+# step 名 -> TTS 情绪标签。不写就整段用 script.py 里的 DEFAULT_EMOTION_BY_STEP,
+# 这里只需要写"跟通用基线不一样"的行 —— 本频道全部照搬默认值,只是把
+# 本频道独有的"模仿一下"步骤显式列出来,防止以后改通用表时忘了检查这个频道。
+emotion_map:
+  模仿一下: 略带调侃
+
+qc:
+  - id: dur
+    kind: duration
+    severity: error
+    params: {min_s: 0, max_s: 480}
+    note: 最长 8 分钟,不设下限——时长跟着内容走,别为了凑时长注水
+  - id: sent
+    kind: max_sentence_len
+    severity: error
+    params: {chars: 28}
+  - id: jargon
+    kind: forbid_terms
+    severity: error
+    params:
+      terms: [共生, 拟态, 光合作用, 授粉, 生态位, 趋光性, 内共生]
+      allow_after_s: 150
+  - id: need_flip
+    kind: require_segment
+    severity: error
+    params: {kind: flip, min_count: 1}
+  - id: need_retell
+    kind: require_segment
+    severity: error
+    params: {kind: retell, min_count: 1}
+  - id: need_demo
+    kind: require_segment
+    severity: error
+    params: {kind: demo, min_count: 1}
+    note: 本频道每期必须有"模仿一下",航天频道没有这条
+  - id: need_preview
+    kind: require_segment
+    severity: error
+    params: {kind: preview, min_count: 1}
+  - id: hook
+    kind: hook_before
+    severity: error
+    params: {seconds: 25}
+  - id: anthro
+    kind: no_anthropomorphism
+    severity: error
+    params: {}
+    note: 频道特有 —— 孩子会把拟人化当事实
+  - id: contact
+    kind: no_contact
+    severity: error
+    params: {}
+    note: 频道特有 —— 演示环节不许引导孩子去碰、抓、尝、采
+  - id: anchor
+    kind: number_anchor
+    severity: warn
+    params: {}
+
+redlines:
+  - 不把行为说成动物的主观意图
+  - 不引导孩子接触、捕捉、品尝、采摘任何野生动植物
+  - 不出现捕食过程的血腥细节
+  - 死亡与灭绝只作为"我们还能做什么"来讲
+  - 术语一律后置
+  - 数字后面必须跟一个身体能感觉的参照
+  - 不确定的说"我们还不知道",不许圆

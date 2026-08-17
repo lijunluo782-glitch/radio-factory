@@ -1,0 +1,86 @@
+{
+  "topic_id": "space-eat-004",
+  "channel": "space",
+  "program": "sky_life",
+  "air_date": "2026-09-28",
+  "segments": [
+    {
+      "kind": "sting",
+      "text": "",
+      "seconds": 3.0,
+      "asset": "mon",
+      "voice": null
+    },
+    {
+      "kind": "announce",
+      "text": "小小航天队。今天是星期一。星期一,我们说说天上的日子。",
+      "seconds": null,
+      "asset": null,
+      "voice": null
+    },
+    {
+      "kind": "vo",
+      "text": "宇航员的餐盘里,永远少不了一瓶辣椒酱。墨西哥味的、路易斯安那味的,他们一箱一箱地往飞船上搬。地面上准备的饭菜,明明经过精心调味。可到了天上,宇航员却总说,菜没味道。这个抱怨,从第一批航天员开始,一直没停过。",
+      "seconds": null,
+      "asset": null,
+      "voice": null
+    },
+    {
+      "kind": "vo",
+      "text": "菜的味道,到底去哪儿了?",
+      "seconds": null,
+      "asset": null,
+      "voice": null
+    },
+    {
+      "kind": "silence",
+      "text": "",
+      "seconds": 2.0,
+      "asset": null,
+      "voice": null
+    },
+    {
+      "kind": "vo",
+      "text": "你有没有感冒堵鼻子的经历?那时候吃什么都没味道,好像舌头也一起感冒了。其实不是舌头出了问题,是鼻子。我们尝到的大部分味道,其实是鼻子闻出来的。舌头只负责咸淡酸甜。感冒的时候鼻子塞住,闻不到食物的香气,吃什么都像嚼纸。宇航员在天上,鼻子也会感冒——但不是真的生病。飞船里没有重力,身体里的水分不会乖乖往下走,反而涌向头部。鼻子里的黏膜跟着肿了一圈,跟感冒堵鼻子一模一样。",
+      "seconds": null,
+      "asset": null,
+      "voice": null
+    },
+    {
+      "kind": "vo",
+      "text": "别怪我,我这儿肿得都喘不过气了。",
+      "seconds": null,
+      "asset": null,
+      "voice": "nose"
+    },
+    {
+      "kind": "vo",
+      "text": "所以这道菜其实调味调得挺好,只是你的鼻子没闻到。这时候,辣椒酱就成了救星。辣椒里的那股辣,其实不是一种味道,更像是一种轻微的疼痛感。这种疼痛感,不用经过鼻子,舌头和嘴巴自己就能感觉到。不信你现在捏住鼻子,尝一口手边的水。感觉一下,味道是不是突然变淡了。可要是换成辣椒水,鼻子堵成什么样都挡不住。",
+      "seconds": null,
+      "asset": null,
+      "voice": null
+    },
+    {
+      "kind": "flip",
+      "text": "你以为怪的是食堂难吃。其实怪的是——不是厨师的问题,是鼻子被糊住了!",
+      "seconds": null,
+      "asset": null,
+      "voice": null
+    },
+    {
+      "kind": "retell",
+      "text": "在天上鼻子会像感冒一样闻不出味道。所以宇航员都爱带辣椒酱上天。",
+      "seconds": null,
+      "asset": null,
+      "voice": null
+    },
+    {
+      "kind": "preview",
+      "text": "明天,我们看看哈勃望远镜,为什么会近视?",
+      "seconds": null,
+      "asset": null,
+      "voice": null
+    }
+  ],
+  "waived_rules": []
+}

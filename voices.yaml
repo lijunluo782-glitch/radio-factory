@@ -1,0 +1,54 @@
+# 声音角色库 —— 跨频道共享的音色资源池,不属于某一个频道,所以没放进 channels/
+# (放那儿会被 `rf channels` 当成一个频道去解析,直接报错)。
+#
+# Segment.voice 字段里写的是"角色 id"(narrator / crumb / bubble / ...),
+# 这张表把角色 id 映射到 MiniMax 实际的 voice_id + 默认语速/音量/音高,
+# 给 script.py 的 tts_tasks() 用。
+#
+# 依据:MiniMax T2A API(platform.minimax.io/docs/api-reference/speech-t2a-http),
+# 系统音色列表见 platform.minimax.io/docs/faq/system-voice-id。
+# 下面的 voice_id 是照公开文档选的型,不是拿真实 key 跑过的——接入时账号里
+# 未必有一模一样的名字(MiniMax 迭代过命名,新老账号能看到的音色表不一定一致),
+# 第一次真跑之前务必用你的 API key 调一次音色列表接口核对,选型不等于核验。
+
+narrator:
+  voice_id: "Chinese (Mandarin)_Radio_Host"
+  speed: 1.0
+  vol: 1.0
+  pitch: 0
+  note: 默认旁白/主持音色,电台广播感,亲切不端着
+
+characters:
+  # 这些是"这个物件自己在说话"时用的音色,跟 PROMPT.md"多角色演绎"一节配套。
+  # 同一个角色 id 尽量跨脚本复用,别每期新起一个——不然这张表会失控膨胀。
+  crumb:
+    voice_id: "Chinese (Mandarin)_Straightforward_Boy"
+    speed: 1.05
+    vol: 1.0
+    pitch: 0
+    note: 直来直去、有点犟——面包渣/盐粒这类"死不悔改"的调皮物件用这个
+  bubble:
+    voice_id: "Chinese (Mandarin)_CrispGirl"
+    speed: 1.1
+    vol: 1.0
+    pitch: 0
+    note: 明快、语速偏快——适合起哄、抱怨拥挤这种小情绪
+  salt:
+    voice_id: "Chinese (Mandarin)_Unrestrained_Young_Man"
+    speed: 1.05
+    vol: 1.0
+    pitch: 0
+    note: 大大咧咧、嗓门大——适合喊冤/抗议
+  nose:
+    voice_id: "Chinese (Mandarin)_SoftGirl"
+    speed: 0.95
+    vol: 1.0
+    pitch: 0
+    note: 偏软、略闷——适合"堵住""委屈"这类状态
+
+# 新增一个角色 voice id 时:
+#   1. 先看这张表里现有几个够不够用(直来直去/明快/大大咧咧/委屈这几种基础
+#      情绪原型,大部分拟人化台词都能往里套,不必每次都新起一个)
+#   2. 真不够用,在 characters 下面加一条,note 写清楚"什么情绪原型用它"
+#   3. nature 频道有禁拟人化红线,这张表里的角色音色不能用在 nature 频道的
+#      动植物身上(细节见 PROMPT.md"多角色演绎"一节)
