@@ -2,6 +2,7 @@
 
 from datetime import date
 
+from radio_factory import script as script_mod
 from radio_factory.models import Script, Segment
 from radio_factory.qc import rules as qc
 from radio_factory.schedule import list_channels, load_channel, open_line, resolve, rundown
@@ -100,6 +101,57 @@ def test_nature_channel_specific_rules():
     )
     ids = {f.rule for f in qc.run(s, ch)}
     assert "anthro" in ids and "contact" in ids
+
+
+def test_turn_gap_same_voice_is_zero():
+    ch = load_channel("space")
+    narrator = Segment(kind="vo", text="旁白说话。")
+    assert script_mod.turn_gap_ms(ch, narrator, narrator) == 0
+
+
+def test_turn_gap_voice_change_uses_default():
+    ch = load_channel("space")
+    narrator = Segment(kind="vo", text="旁白说话。")
+    salt = Segment(kind="vo", text="让开让开!", voice="salt")
+    assert script_mod.turn_gap_ms(ch, narrator, salt) == script_mod.DEFAULT_TURN_GAP_MS
+
+
+def test_turn_gap_channel_override():
+    ch = load_channel("space")
+    ch.turn_gap_ms = 80  # 频道自己覆盖默认间隔,跟 emotion_map 同一个模式
+    narrator = Segment(kind="vo", text="旁白说话。")
+    salt = Segment(kind="vo", text="让开让开!", voice="salt")
+    assert script_mod.turn_gap_ms(ch, narrator, salt) == 80
+
+
+def test_turn_gap_follows_designed_silence():
+    ch = load_channel("space")
+    silence = Segment(kind="silence", seconds=2.0)
+    salt = Segment(kind="vo", text="接着说。", voice="salt")
+    assert script_mod.turn_gap_ms(ch, silence, salt) == 0
+
+
+def test_assemble_manifest_on_real_dialogue_script():
+    """用真实脚本(旁白起头 -> salt 插话 -> 旁白接回来)验证换人说话会插间隔。"""
+    ch = load_channel("space")
+    s = script_mod.load(script_mod.SCRIPT_DIR / "space_2026-09-11_how_fly.json")
+    manifest = script_mod.assemble_manifest(s, ch)
+    by_index = {m["index"]: m for m in manifest}
+
+    assert by_index[4]["type"] == "silence"  # 反问后的留白
+
+    narrator_open = by_index[5]
+    assert narrator_open["voice"] == "narrator"
+    assert narrator_open["gap_reason"] == "follows_designed_silence"
+
+    salt_line = by_index[6]
+    assert salt_line["voice"] == "salt"
+    assert salt_line["gap_reason"] == "voice_change"
+    assert salt_line["gap_before_ms"] == script_mod.DEFAULT_TURN_GAP_MS
+
+    narrator_close = by_index[7]
+    assert narrator_close["voice"] == "narrator"
+    assert narrator_close["gap_reason"] == "voice_change"
 
 
 def test_topic_screening():

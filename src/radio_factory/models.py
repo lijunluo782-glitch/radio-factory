@@ -133,6 +133,7 @@ class Channel(BaseModel):
     qc: list[QCRule] = Field(default_factory=list)
     redlines: list[str] = Field(default_factory=list)
     emotion_map: dict[str, str] = Field(default_factory=dict)  # step 名 -> 情绪标签,覆盖默认表
+    turn_gap_ms: int | None = None  # 换人说话的默认间隔,覆盖 script.py 的 DEFAULT_TURN_GAP_MS;不写就用通用基线
 
     def slot_for(self, weekday: int) -> Slot | None:
         return next((s for s in self.slots if s.weekday == weekday), None)

@@ -37,6 +37,11 @@ def _emotion_for(ch: Channel, step_name: str) -> str | None:
     return ch.emotion_map.get(step_name) or DEFAULT_EMOTION_BY_STEP.get(step_name)
 
 
+# 相邻两段之间,换人说话时默认插的间隔。跟 emotion_map 一样的模式:
+# 频道在 YAML 里写 turn_gap_ms 就覆盖这个值,不写就用这条通用基线。
+DEFAULT_TURN_GAP_MS = 220
+
+
 def skeleton(ch: Channel, air: Airing, topic: Topic | None = None) -> Script:
     """按频道骨架生成空脚本框架,供编导或模型填写。
 
@@ -168,3 +173,73 @@ def tts_tasks(script: Script, default_voice: str = "narrator") -> list[dict]:
                 }
             )
     return tasks
+
+
+# ------------------------------------------------------------------ 拼接清单
+
+
+def _gap(ch: Channel, prev: Segment | None, seg: Segment) -> tuple[int, str]:
+    """相邻两段之间该停多久。跟 resolve() 一样是确定性计算,不涉及 AI。"""
+    if prev is None:
+        return 0, "first_segment"
+    if prev.kind == "silence":
+        return 0, "follows_designed_silence"
+    if seg.kind in ("sting", "announce") or prev.kind in ("sting", "announce"):
+        return 0, "fixed_anchor"
+    prev_voice = prev.voice or "narrator"
+    seg_voice = seg.voice or "narrator"
+    if prev_voice == seg_voice:
+        return 0, "same_voice"
+    gap = ch.turn_gap_ms if ch.turn_gap_ms is not None else DEFAULT_TURN_GAP_MS
+    return gap, "voice_change"
+
+
+def turn_gap_ms(ch: Channel, prev: Segment | None, seg: Segment) -> int:
+    """`_gap()` 的间隔部分,单独暴露出来方便测试和外部调用。"""
+    return _gap(ch, prev, seg)[0]
+
+
+def assemble_manifest(script: Script, ch: Channel) -> list[dict]:
+    """导出拼接清单:顺序 + 间隔 + 文件名,不碰音频字节。
+
+    对接方式:把这份清单喂给拼接单段 mp3 的那一层(ffmpeg 或设备端播放器)。
+    本仓库只算"怎么排",不做真正的拼接/混音——那些仍然是后期链路的事。
+    `source` 文件名沿用 `minimax_tts.synthesize_script()` 已经在用的
+    `seg_{index:02d}_{kind}.mp3` 命名,不用改现有产物。
+    """
+    manifest: list[dict] = []
+    prev: Segment | None = None
+    for i, seg in enumerate(script.segments):
+        if seg.kind == "silence":
+            manifest.append({"index": i, "type": "silence", "seconds": seg.est_seconds})
+            prev = seg
+            continue
+        if seg.kind in ("sting", "sfx"):
+            gap, reason = _gap(ch, prev, seg)
+            manifest.append(
+                {
+                    "index": i,
+                    "type": "asset",
+                    "asset": seg.asset,
+                    "seconds": seg.est_seconds,
+                    "gap_before_ms": gap,
+                    "gap_reason": reason,
+                }
+            )
+            prev = seg
+            continue
+        if not seg.text.strip():
+            continue
+        gap, reason = _gap(ch, prev, seg)
+        manifest.append(
+            {
+                "index": i,
+                "type": "tts",
+                "voice": seg.voice or "narrator",
+                "source": f"seg_{i:02d}_{seg.kind}.mp3",
+                "gap_before_ms": gap,
+                "gap_reason": reason,
+            }
+        )
+        prev = seg
+    return manifest
