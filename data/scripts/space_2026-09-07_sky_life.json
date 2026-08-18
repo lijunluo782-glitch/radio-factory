@@ -9,70 +9,144 @@
       "text": "",
       "seconds": 3.0,
       "asset": "mon",
-      "voice": null
+      "voice": null,
+      "step": "",
+      "emotion": null
     },
     {
       "kind": "announce",
       "text": "小小航天队。今天是星期一。星期一,我们说说天上的日子。",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": null,
+      "step": "",
+      "emotion": null
     },
     {
       "kind": "vo",
-      "text": "你现在飘在国际空间站里,拉开厨房的柜子。你猜猜看,里面会有面包吗?没有。一片都没有。馒头?吐司?三明治?统统不会出现在宇航员的餐盘上。倒是有一样东西,几乎每顿饭都在——卷起来的,软软的玉米饼。这个规矩,已经定了四十年,从来没有改过。",
+      "text": "你现在飘在国际空间站里,拉开厨房的柜子。你猜猜看,里面会有面包吗?",
       "seconds": null,
       "asset": null,
-      "voice": null
-    },
-    {
-      "kind": "vo",
-      "text": "面包渣,到底招谁惹谁了?它做错了什么?",
-      "seconds": null,
-      "asset": null,
-      "voice": null
+      "voice": null,
+      "step": "",
+      "emotion": null
     },
     {
       "kind": "silence",
       "text": "",
       "seconds": 2.0,
       "asset": null,
-      "voice": null
+      "voice": null,
+      "step": "",
+      "emotion": null
     },
     {
       "kind": "vo",
-      "text": "你先猜一猜。饼干渣掉在地上,会怎么样?掉在太空舱里,又会怎么样?地上很简单——你弯腰一捡,它就乖乖待在你手心里。太空舱里呢?你猜对了吗?什么都不会发生——因为它压根不会往下掉。它会飘着。像你把一把彩色纸屑扔向空中,不落地,反而绕着你转圈。这颗渣渣接下来去哪儿,谁也说不准。它可能一头扎进你的眼睛,痒得你直揉。也可能钻进鼻子里,呛得你打喷嚏。最可怕的是,钻进精密仪器的缝隙里。一粒渣渣卡住一个开关。整个空间站都可能跟着闹脾气。这跟你的游戏机卡了机,是同一个道理。不信你现在就试试。弹一下手指。想象那颗渣不往下掉,反而懒洋洋飘在你眼前。怎么赶,都赶不走。所以连宇航员自己吃饭,都得放慢动作。嘴巴凑近一点,小口小口地咬。",
+      "text": "没有。一片都没有。馒头?吐司?三明治?统统不会出现在宇航员的餐盘上。倒是有一样东西,几乎每顿饭都在——卷起来的,软软的玉米饼。这个规矩,已经定了四十年,从来没有改过。",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": null,
+      "step": "",
+      "emotion": null
+    },
+    {
+      "kind": "vo",
+      "text": "面包渣,到底招谁惹谁了?它做错了什么?",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "",
+      "emotion": null
+    },
+    {
+      "kind": "silence",
+      "text": "",
+      "seconds": 2.0,
+      "asset": null,
+      "voice": null,
+      "step": "",
+      "emotion": null
+    },
+    {
+      "kind": "vo",
+      "text": "你先猜一猜——饼干渣掉在地上,会怎么样?简单,对吧?你弯腰一捡,它就乖乖待在你手心里。那换成太空舱里呢?",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "",
+      "emotion": null
+    },
+    {
+      "kind": "silence",
+      "text": "",
+      "seconds": 2.0,
+      "asset": null,
+      "voice": null,
+      "step": "",
+      "emotion": null
+    },
+    {
+      "kind": "vo",
+      "text": "你猜对了吗?其实什么都不会发生,它压根不会往下掉。它就那么飘着。像你把一把彩色纸屑扔向空中,风一吹,不落地。反而绕着你打转。接下来去哪儿,谁也说不准。扎进你眼睛,痒得直揉;钻进鼻子,呛得打喷嚏;运气最差,还会卡住空间站的开关,让它跟着闹脾气。这跟你打游戏打到一半,手柄突然卡机,是同一种崩溃。不信你自己试试。弹一下手指,想象那颗渣不往下掉,反而懒洋洋地飘在你眼前。",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "",
+      "emotion": null
+    },
+    {
+      "kind": "silence",
+      "text": "",
+      "seconds": 2.0,
+      "asset": null,
+      "voice": null,
+      "step": "",
+      "emotion": null
+    },
+    {
+      "kind": "vo",
+      "text": "怎么赶,都赶不走,对吧?你猜宇航员怎么对付这些捣蛋鬼?放慢动作,嘴巴凑近一点,小口小口地咬。",
+      "seconds": null,
+      "asset": null,
+      "voice": null,
+      "step": "",
+      "emotion": null
     },
     {
       "kind": "vo",
       "text": "我可不管,我就是要飘。",
       "seconds": null,
       "asset": null,
-      "voice": "crumb"
+      "voice": "crumb",
+      "step": "",
+      "emotion": null
     },
     {
       "kind": "flip",
       "text": "你以为,天上不能带面包,已经够奇怪了。其实更奇怪的是——连一粒面包渣,都能被当成危险品!",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": null,
+      "step": "",
+      "emotion": null
     },
     {
       "kind": "retell",
-      "text": "面包会掉渣,渣渣飘起来堵住仪器或被吸进肺里。所以太空里禁止带面包。",
+      "text": "面包会掉渣,渣渣飘起来堵住仪器。或被吸进肺里,所以太空里禁止带面包。",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": null,
+      "step": "",
+      "emotion": null
     },
     {
       "kind": "preview",
       "text": "明天,我们当一次实验室的破坏王:声音在没有空气的地方,还跑得动吗?",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": null,
+      "step": "",
+      "emotion": null
     }
   ],
   "waived_rules": []
