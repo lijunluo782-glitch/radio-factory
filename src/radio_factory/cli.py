@@ -114,6 +114,7 @@ def skeleton(channel: str, day: str, topic_id: str = typer.Option(None)):
     s = script_mod.skeleton(ch, a, tp)
     path = script_mod.save(s)
     console.print(f"[green]✓[/green] {path}  预估 {s.duration_s}s / {s.word_count} 字")
+    console.print(f"[yellow]开场白待手写[/yellow]  参考:{open_line(ch, a)}")
 
 
 @app.command()

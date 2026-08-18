@@ -41,7 +41,7 @@ class Program(BaseModel):
 
     id: str
     name: str
-    tagline: str = ""  # 开场白后半句,可变
+    tagline: str = ""  # 排播预览参考文案(rf rundown/dashboard 用),不是强制播出稿
     categories: list[Category] = Field(default_factory=list)
     structure_override: list[str] | None = None
 
@@ -58,7 +58,7 @@ class Slot(BaseModel):
 
     weekday: int = Field(ge=1, le=7)
     domain: str  # 领域,给运营看
-    announce: str = ""  # 领域宣告,一年不变 —— 孩子的锚
+    announce: str = ""  # 排播预览参考文案(rf rundown/dashboard 用),开场白改为每期手写,不再强制套用
     sting: str | None = None
     duration_min: float = 3.5
     mode: Literal["fixed", "rotate", "recap", "off"] = "fixed"

@@ -39,7 +39,8 @@ def test_fixed_slots_never_change():
 
 
 def test_announce_is_stable_anchor():
-    """孩子的锚是领域宣告,轮换只能改后半句。"""
+    """open_line() 是排播预览参考文案(rf rundown/dashboard 用),轮换只改后半句;
+    实际播出的开场白改为每期手写,不再套用这份文案。"""
     ch = load_channel("space")
     for d in [date(2026, 9, 10), date(2026, 9, 17), date(2026, 9, 24)]:
         assert open_line(ch, resolve(ch, d)).startswith("小小航天队。今天是星期四。星期四,我们认识一个人。")

@@ -47,8 +47,6 @@ def skeleton(ch: Channel, air: Airing, topic: Topic | None = None) -> Script:
 
     这一步刻意不调用任何模型 —— 结构是产品决策,不该交给生成。
     """
-    from .schedule import open_line
-
     segs: list[Segment] = []
     if air.sting:
         segs.append(
@@ -57,7 +55,7 @@ def skeleton(ch: Channel, air: Airing, topic: Topic | None = None) -> Script:
     segs.append(
         Segment(
             kind="announce",
-            text=open_line(ch, air),
+            text="",  # 不再自动套模板,跟其他 vo 段一样留空手写 —— 见 PROMPT.md「开场白:手写,不套死模板」
             step="开场白",
             emotion=_emotion_for(ch, "开场白"),
         )

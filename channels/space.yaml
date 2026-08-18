@@ -12,7 +12,7 @@ structure:
     note: 每天固定,孩子先认出声音再认出名字
   - name: 开场白
     seconds: 10
-    note: 频道名 + 今天星期几 + 领域宣告。一年不变
+    note: 节目名 + 今天星期几(措辞随意)+ 一句轻钩子。每期手写,不套模板,见 PROMPT.md「开场白」
   - name: 现象
     seconds: 40
     note: 只给现象,不解释
@@ -69,6 +69,8 @@ stings:
     note: 五声,对应五件事
 
 # ---------------------------------------------------------------- 排播
+# announce / tagline 是排播预览参考文案(rf rundown、dashboard 显示用),
+# 不是强制播出稿 —— 实际开场白每期在脚本里手写,见 PROMPT.md「开场白」。
 slots:
   - weekday: 1
     domain: 人在太空 · 生存
