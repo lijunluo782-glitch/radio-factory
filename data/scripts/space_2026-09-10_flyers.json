@@ -10,35 +10,125 @@
       "seconds": 3.0,
       "asset": "thu",
       "voice": null,
-      "step": "声音标识",
+      "step": "",
       "emotion": null
     },
     {
       "kind": "announce",
-      "text": "转眼周四了,飞上去的人——今天这位,前一晚脑子里到底在想什么?",
+      "text": "大家好,我是陈果!",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "开场白",
-      "emotion": "好奇开场"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "announce",
+      "text": "我是多多!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "announce",
+      "text": "转眼周四了,飞上去的人。今天这位,前一晚脑子里到底在想什么?",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "vo",
-      "text": "明天早上,他就要飞上天了。这是人类历史上,第一次有人要去太空。没人知道天上到底是什么感觉。没人试过这枚火箭到底靠不靠谱。发射前一晚,他到底睡没睡着?官方记录说,他睡得很好。可后来了解他的人说,那晚他其实根本没合眼。到底哪个是真的?连历史学家都说不准。",
+      "text": "明天早上,他就要飞上天了。",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "现象",
-      "emotion": "好奇开场"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "人类历史上,第一次有人要去太空。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "没人知道天上到底是什么感觉。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "没人试过这枚火箭到底靠不靠谱。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "那他前一晚睡得着吗?",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "官方记录说,他睡得很好。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "可后来了解他的人说,那晚他其实根本没合眼。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "到底哪个是真的?",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "连历史学家都说不准。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "vo",
       "text": "这么大的事,他心里到底在想什么?",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "反问",
-      "emotion": "略带调侃"
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "silence",
@@ -46,44 +136,170 @@
       "seconds": 2.0,
       "asset": null,
       "voice": null,
-      "step": "留白",
+      "step": "",
       "emotion": null
     },
     {
       "kind": "vo",
-      "text": "现在,假装你就是他。明天,你要做一件从没人做过的事。没有人能告诉你,天上到底是什么样。你会不会害怕?会。但今晚能做的事,其实早就做完了。训练做了,检查做了,该想的风险也都想过了。再想下去,只是让自己更紧张,帮不上任何忙。睡没睡着,可能连他自己事后都说不清楚。但不管睡没睡着,第二天他都得起来,穿上装备。一路走向火箭,像是去上班一样平常。",
+      "text": "现在,假装你就是他。",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "解释",
-      "emotion": null
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "明天,你要做一件从没人做过的事。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "没有人能告诉你天上到底是什么样。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "换成是我,肯定超害怕!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "会害怕,但今晚能做的事,其实早就做完了。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "训练做了,检查做了,该想的风险也都想过了。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "再想下去,只是让自己更紧张,帮不上任何忙。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "那他到底睡没睡着啊?",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "可能连他自己事后都说不清楚。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "但不管睡没睡着,第二天他都得起来,穿上装备。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "然后呢?",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "一路走向火箭,像是去上班一样平常。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "flip",
       "text": "你以为怪的是他不紧张。其实怪的是——连他到底睡没睡着,我们到今天都还不确定。",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "翻转",
-      "emotion": "若有所思"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "retell",
       "text": "关于他发射前那晚,连历史学家都说不准睡没睡着。但他还是照样出发了。",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "转述句",
-      "emotion": "轻松收尾"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "好啦,今天就聊到这儿。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "换成是我,今晚肯定会失眠想这个!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "preview",
-      "text": "明天,我们拆开一枚火箭。它在天上,到底蹬的是什么?",
+      "text": "明天,我们拆开一枚火箭。",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "明日预告",
-      "emotion": "轻松收尾"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "preview",
+      "text": "它在天上,到底蹬的是什么?我们明天见!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
     }
   ],
   "waived_rules": []

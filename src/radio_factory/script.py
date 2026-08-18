@@ -122,12 +122,21 @@ def _load_voice_roster() -> dict:
     return yaml.safe_load(VOICE_ROSTER_PATH.read_text(encoding="utf-8")) or {}
 
 
-def voice_setting(voice: str | None, roster: dict | None = None) -> dict:
-    """把角色 id(None/narrator/crumb/...)解析成 MiniMax 的 voice_setting。
+def voice_setting(voice: str | None, roster: dict | None = None, ch: Channel | None = None) -> dict:
+    """把角色 id 解析成 MiniMax 的 voice_setting。
 
-    查不到就退回 narrator——这张表在 voices.yaml,是跨频道共享的音色资源池,
-    不是本仓库要维护的"合成结果",只是把角色 id 翻成 MiniMax 认识的 voice_id。
+    先查频道自己的 `hosts`(主持人是频道身份,换频道换人),查不到再退回
+    voices.yaml 的跨频道共享角色池,都查不到才退回 narrator。
     """
+    if ch is not None and voice and voice in ch.hosts:
+        entry = ch.hosts[voice]
+        narrator_fallback = {"voice_id": "Chinese (Mandarin)_Radio_Host"}
+        return {
+            "voice_id": entry.get("voice_id", narrator_fallback["voice_id"]),
+            "speed": entry.get("speed", 1.0),
+            "vol": entry.get("vol", 1.0),
+            "pitch": entry.get("pitch", 0),
+        }
     roster = roster if roster is not None else _load_voice_roster()
     narrator = roster.get("narrator", {"voice_id": "Chinese (Mandarin)_Radio_Host"})
     entry = roster.get("characters", {}).get(voice, narrator) if voice else narrator
@@ -139,11 +148,13 @@ def voice_setting(voice: str | None, roster: dict | None = None) -> dict:
     }
 
 
-def tts_tasks(script: Script, default_voice: str = "narrator") -> list[dict]:
+def tts_tasks(script: Script, ch: Channel | None = None, default_voice: str = "narrator") -> list[dict]:
     """导出成 TTS 任务列表。
 
     对接方式:把这个列表喂给你现有的 MiniMax 合成层。
     本仓库不实现合成,只负责产出稳定的任务描述 —— 保持解耦。
+    传 `ch` 才能解析频道自己的主持人 voice id(见 `voice_setting()`);
+    不传就只能查跨频道共享的 voices.yaml,主持人角色会解析失败退回 narrator。
     """
     roster = _load_voice_roster()
     tasks = []
@@ -163,7 +174,7 @@ def tts_tasks(script: Script, default_voice: str = "narrator") -> list[dict]:
                     "index": i,
                     "type": "tts",
                     "voice": seg.voice or default_voice,
-                    "voice_setting": voice_setting(seg.voice, roster),
+                    "voice_setting": voice_setting(seg.voice, roster, ch),
                     "text": seg.text,
                     "est_seconds": seg.est_seconds,
                     "kind": seg.kind,

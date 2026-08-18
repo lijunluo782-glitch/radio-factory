@@ -10,35 +10,98 @@
       "seconds": 3.0,
       "asset": "tue",
       "voice": null,
-      "step": "声音标识",
+      "step": "",
       "emotion": null
     },
     {
       "kind": "announce",
-      "text": "一晃就周二了,太空实验室开工——今天问你一个事:宇航员在舱外,冲同伴大喊一声,他听得见吗?",
+      "text": "大家好,我是陈果!",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "开场白",
-      "emotion": "好奇开场"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "announce",
+      "text": "我是多多!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "announce",
+      "text": "一晃就周二了,太空实验室开工。今天问你一个事:宇航员在舱外,冲同伴大喊一声,他听得见吗?",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "vo",
-      "text": "宇航员飘在太空舱外,做舱外维修。同伴在舱内,对着他大喊一声。声音,一点没传出去。哪怕贴着舱壁喊,外面的宇航员也听不见。两个人明明离得很近,却像隔着一堵永远打不穿的墙。这堵墙,不是舱壁做的。",
+      "text": "宇航员飘在太空舱外,做舱外维修。同伴在舱内,对着他大喊一声。",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "现象",
-      "emotion": "好奇开场"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "然后呢?他听见了吗?",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "声音,一点没传出去。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "哪怕贴着舱壁喊,外面的宇航员也听不见。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "两个人明明离得很近,却像隔着一堵永远打不穿的墙。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "这堵墙,不是舱壁做的。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "vo",
       "text": "声音,到底去哪儿了?",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "反问",
-      "emotion": "略带调侃"
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "silence",
@@ -46,62 +109,170 @@
       "seconds": 2.0,
       "asset": null,
       "voice": null,
-      "step": "留白",
-      "emotion": null
-    },
-    {
-      "kind": "vo",
-      "text": "在家里,你喊一嗓子。声音靠空气一路传过去,撞进耳朵里,你才能听见。空气就像一串多米诺骨牌,一个撞一个,把声音传下去。太空舱外,没有空气。没有多米诺骨牌,声音刚喊出口,就没有下一张牌可以撞了。喊得再大声也没用——声音根本走不出你的嘴。",
-      "seconds": null,
-      "asset": null,
-      "voice": null,
-      "step": "解释",
-      "emotion": null
-    },
-    {
-      "kind": "vo",
-      "text": "别喊了,我压根走不出去!",
-      "seconds": null,
-      "asset": null,
-      "voice": "bubble",
       "step": "",
-      "emotion": "略带调侃"
+      "emotion": null
     },
     {
       "kind": "vo",
-      "text": "所以宇航员在舱外维修,靠的不是喊,是无线电。无线电信号不需要空气,能一路传到耳机里。这时候,喊话没用,说话才管用。",
+      "text": "在家里,你喊一嗓子。",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "解释",
-      "emotion": null
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "声音靠空气一路传过去,撞进耳朵里,你才能听见。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "空气就像一串多米诺骨牌,一个撞一个,把声音传下去。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "那太空舱外呢?",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "太空舱外,没有空气。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "没有多米诺骨牌,声音刚喊出口,就没有下一张牌可以撞了。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "喊得再大声也没用?",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "对,声音根本走不出你的嘴。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "哇,那不就等于隔着一层真空在打哑语!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "所以宇航员在舱外维修,靠的不是喊,是无线电。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "无线电信号不需要空气,能一路传到耳机里。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "这时候,喊话没用,说话才管用。",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "flip",
       "text": "你以为怪的是听不见。其实怪的是——不是喊得不够大声,是根本没有路能让声音走。",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "翻转",
-      "emotion": "若有所思"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "retell",
       "text": "太空舱外没有空气,声音传不出去。宇航员在舱外只能靠无线电说话,不能大喊大叫。",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "转述句",
-      "emotion": "轻松收尾"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "好啦,今天就聊到这儿。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "下次玩太空题材的游戏,可以留意这个细节!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "preview",
-      "text": "明天,我们算一算:开车去月球,要开多久?",
+      "text": "明天,我们算一算。",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "明日预告",
-      "emotion": "轻松收尾"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "preview",
+      "text": "开车去月球,要开多久?我们明天见!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
     }
   ],
   "waived_rules": []

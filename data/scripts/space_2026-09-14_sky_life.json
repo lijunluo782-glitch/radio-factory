@@ -9,77 +9,315 @@
       "text": "",
       "seconds": 3.0,
       "asset": "mon",
-      "voice": null
+      "voice": null,
+      "step": "",
+      "emotion": null
     },
     {
       "kind": "announce",
-      "text": "礼拜一,是不是还有点没睡醒?天上的日子到点了——今天想问你一件事:宇航员的柜子里,为什么找不到一瓶汽水?",
+      "text": "大家好,我是陈果!",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "announce",
+      "text": "我是多多!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "announce",
+      "text": "礼拜一,天上的日子到点了。今天想问你一件事:宇航员的柜子里,为什么找不到一瓶汽水?",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "vo",
-      "text": "打开宇航员的储藏柜,你找不到一瓶汽水。可乐、雪碧、姜汁汽水,统统没有。你猜是因为宇航员不爱喝吗?猜错了。是汽水在太空里,被贴上了禁止携带的标签。这张标签,已经贴了几十年,从没撕下来过。",
+      "text": "打开宇航员的储藏柜,你找不到一瓶汽水。可乐、雪碧、姜汁汽水,统统没有。",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "为什么啊?宇航员不爱喝汽水吗?",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "猜错了,是汽水在太空里,被贴上了禁止携带的标签。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "而且这张标签,已经贴了几十年。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "vo",
       "text": "打嗝这件事,怎么就成了太空禁忌?",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "silence",
       "text": "",
       "seconds": 2.0,
       "asset": null,
-      "voice": null
+      "voice": null,
+      "step": "",
+      "emotion": null
     },
     {
       "kind": "vo",
-      "text": "在家里打嗝,是这样的。汽水一倒进杯子,气泡就争先恐后往上冲。噗噗噗,冒到最上面。喝下去,气泡在你肚子里也会往上跑,跟液体分得清清楚楚。打出来的嗝,只有气,没有水。可太空舱里没有上面。气泡冒不出去,只能跟汽水搅在一起,变成一锅乱糟糟的泡沫水。",
+      "text": "在家里打嗝,是这样的。汽水一倒进杯子,气泡就争先恐后往上冲。",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "vo",
-      "text": "我们挤在一起,谁也让不了谁!",
+      "text": "噗噗噗,冒到最上面。",
       "seconds": null,
       "asset": null,
-      "voice": "bubble"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "vo",
-      "text": "喝下去,这锅泡沫水也进了肚子。你一打嗝,气会带着液体一起往外冲。这不是打嗝,这是喷水。想象一下。你正对着同伴说话,忽然一个嗝上来。喷了对方一脸汽水。多尴尬。不信你现在试试。憋住一个嗝,不让它出来。感觉那股气顶在喉咙口的样子。在太空里,那股气后面还跟着一嘴水。所以宇航员宁可不喝,也不想在同伴面前出这个丑。",
+      "text": "喝下去,气泡在你肚子里也会往上跑,跟液体分得清清楚楚。",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "打出来的嗝,只有气,没有水。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "那太空舱里呢?",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "太空舱里没有上面。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "气泡冒不出去,只能跟汽水搅在一起,变成一锅乱糟糟的泡沫水。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "哇,气泡全挤成一团,谁也不让谁!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "喝下去,这锅泡沫水也进了肚子。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "你一打嗝,气会带着液体一起往外冲,这不是打嗝,这是喷水。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "喷水?!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "想象一下,你正对着同伴说话,忽然一个嗝上来。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "喷了对方一脸汽水。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "太尴尬了吧!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "不信你自己试试。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "憋住一个嗝,不让它出来。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "感觉那股气顶在喉咙口的样子。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "在太空里,那股气后面还跟着一嘴水。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "难怪宇航员宁可不喝,也不想在同伴面前出这个丑。",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "flip",
       "text": "你以为怪的是没有汽水喝。其实怪的是——打嗝在天上会喷出一嘴水!",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "retell",
       "text": "太空里汽水的气泡不会往上飘,喝下去打嗝会把液体一起打出来。所以不让喝。",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "好啦,今天就聊到这儿。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "记得讲给朋友听,保准他们不信!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "preview",
-      "text": "明天,我们做个实验:蜡烛的火苗,在太空舱里会是什么形状?",
+      "text": "明天,我们做个实验。",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "preview",
+      "text": "蜡烛的火苗,在太空舱里会是什么形状?我们明天见!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
     }
   ],
   "waived_rules": []

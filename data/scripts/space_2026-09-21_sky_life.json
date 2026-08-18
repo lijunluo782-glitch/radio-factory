@@ -9,77 +9,297 @@
       "text": "",
       "seconds": 3.0,
       "asset": "mon",
-      "voice": null
+      "voice": null,
+      "step": "",
+      "emotion": null
     },
     {
       "kind": "announce",
-      "text": "又是周一,天上的日子准时开张——今天想问你一件事:太空厨房的调料架上,盐瓶和胡椒罐,去哪儿了?",
+      "text": "大家好,我是陈果!",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "announce",
+      "text": "我是多多!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "announce",
+      "text": "又是周一,天上的日子准时开张。今天想问你一件事:太空厨房的调料架上,盐瓶和胡椒罐,去哪儿了?",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "vo",
-      "text": "打开太空厨房的调料架,你会愣住。没有盐瓶,没有胡椒罐,一个都没有。取而代之的,是一排挤压瓶,装着黏糊糊的液体。贴着盐味和胡椒味的标签。这些液体,才是宇航员真正用的调料。固体盐和胡椒粉,在天上是彻头彻尾的违禁品。",
+      "text": "打开太空厨房的调料架,你会愣住。",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "没有盐瓶,没有胡椒罐,一个都没有。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "那用什么调味啊?",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "取而代之的,是一排挤压瓶,装着黏糊糊的液体。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "贴着盐味和胡椒味的标签。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "固体盐和胡椒粉,在天上是彻头彻尾的违禁品。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "vo",
       "text": "调料瓶,怎么就成了太空违禁品?",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "silence",
       "text": "",
       "seconds": 2.0,
       "asset": null,
-      "voice": null
+      "voice": null,
+      "step": "",
+      "emotion": null
     },
     {
       "kind": "vo",
-      "text": "我们来拆开一支太空调料瓶,看看里面藏着什么秘密。第一层,是瓶身——软软的塑料,一捏就出料,不用倒。为什么不能倒?因为固体的盐粒,一旦撒出来,就飘在空中,不会落进碗里。飘着的盐粒,专挑麻烦的地方钻。钻进眼睛,痒得你直揉。钻进精密仪器的缝隙,可能让开关卡住。这跟你把一把沙子扬到空中,沙子不落地、反而钻你眼睛。是同一个麻烦。第二层,是瓶口——特意做得很细,一次只挤出一小滴。这一滴,黏糊糊的,沾在食物上就不会飘走。第三层,才是真正的调料。盐、胡椒,统统被溶进了黏稠的液体里。",
+      "text": "我们来拆开一支太空调料瓶,看看里面藏着什么秘密。",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "vo",
-      "text": "谁要被泡成水!我本来好好的!",
+      "text": "第一层,是瓶身——软软的塑料,一捏就出料,不用倒。",
       "seconds": null,
       "asset": null,
-      "voice": "salt"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "vo",
-      "text": "没办法,谁让你一撒手就到处乱飞。这样一来,再也不会有一粒盐,变成到处乱飞的太空垃圾。",
+      "text": "为什么不能倒?",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "因为固体的盐粒,一旦撒出来,就飘在空中,不会落进碗里。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "飘着的盐粒,专挑麻烦的地方钻。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "钻进眼睛,痒得直揉;钻进精密仪器的缝隙,可能让开关卡住。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "这跟把一把沙子扬到空中,沙子不落地。",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "反而钻你眼睛,是同一个麻烦吧?",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "对。第二层,是瓶口——特意做得很细,一次只挤出一小滴。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "黏糊糊的,沾在食物上就不会飘走。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "第三层,才是真正的调料。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "盐、胡椒,统统被溶进了黏稠的液体里。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "哈,那些盐粒肯定不愿意,谁想被泡成水啊!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "没办法,谁让你一撒手就到处乱飞。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "这样一来,再也不会有一粒盐,变成到处乱飞的太空垃圾。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "flip",
       "text": "你以为怪的是没味道。其实怪的是——连一粒盐,都能变成太空垃圾!",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "retell",
       "text": "盐粒胡椒粒会飘起来钻进眼睛和仪器缝里。所以太空里的调料都做成了液体。",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "好啦,今天就聊到这儿。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "下次撒盐的时候,可以想想这个故事!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "preview",
-      "text": "明天,我们做个实验:为什么火星看起来是红色的?",
+      "text": "明天,我们做个实验。",
       "seconds": null,
       "asset": null,
-      "voice": null
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "preview",
+      "text": "为什么火星看起来是红色的?我们明天见!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
     }
   ],
   "waived_rules": []

@@ -188,8 +188,9 @@ def synthesize(channel: str, path: str, out: str = typer.Option(None, help="输�
     """调 MiniMax 把某个脚本逐段合成 mp3。只到"每段有音频"为止,不拼接不混音。"""
     from .audio import minimax_tts
 
+    ch = load_channel(channel)
     s = script_mod.load(Path(path))
-    tasks = script_mod.tts_tasks(s)
+    tasks = script_mod.tts_tasks(s, ch)
     d = Path(out) if out else OUT / channel / "tts"
     try:
         paths = minimax_tts.synthesize_script(tasks, d)

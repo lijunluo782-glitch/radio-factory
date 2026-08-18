@@ -10,35 +10,89 @@
       "seconds": 3.0,
       "asset": "fri",
       "voice": null,
-      "step": "声音标识",
+      "step": "",
       "emotion": null
     },
     {
       "kind": "announce",
-      "text": "终于周五啦!飞起来的秘密——今天问你一句:天上没有地面可以蹬,火箭凭什么能往前冲?",
+      "text": "大家好,我是陈果!",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "开场白",
-      "emotion": "好奇开场"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "announce",
+      "text": "我是多多!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "announce",
+      "text": "终于周五啦!飞起来的秘密。今天问你一句:天上没有地面可以蹬,火箭凭什么能往前冲?",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "vo",
-      "text": "火箭点火,轰的一声冲上天。可它脚底下,没有地面可以蹬。天上空空荡荡,什么都没有。没有地面、没有墙、没有任何东西能推它一把。它却越飞越快。这股劲儿,到底是哪儿来的?",
+      "text": "火箭点火,轰的一声冲上天。",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "现象",
-      "emotion": "好奇开场"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "vo",
-      "text": "没有东西可以蹬,火箭凭什么能往前冲?",
+      "text": "可它脚底下,没有地面可以蹬。",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "反问",
-      "emotion": "略带调侃"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "天上不是空空荡荡吗?",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "对,没有地面、没有墙、没有任何东西能推它一把。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "它却越飞越快。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "这股劲儿,到底是哪儿来的?",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "silence",
@@ -46,62 +100,206 @@
       "seconds": 2.0,
       "asset": null,
       "voice": null,
-      "step": "留白",
+      "step": "",
       "emotion": null
     },
     {
       "kind": "vo",
-      "text": "想象火箭里坐着两个较劲的家伙。一个是火箭本身,一个是烧红的燃气。燃气脾气很冲,非要往后冲出去不可。",
+      "text": "想象火箭里坐着两个较劲的家伙。",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "解释",
-      "emotion": null
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "一个是火箭本身,一个是烧红的燃气。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "燃气脾气很冲,非要往后冲出去不可。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "vo",
       "text": "让开让开,我要出去!",
       "seconds": null,
       "asset": null,
-      "voice": "salt",
+      "voice": "duoduo",
       "step": "",
-      "emotion": "略带调侃"
+      "emotion": "surprised"
     },
     {
       "kind": "vo",
-      "text": "火箭拦不住它,也不想拦。燃气哗一下往后冲了出去。这一冲,不是白冲的。燃气往后冲多大力气,火箭就被往前推多大力气。这两股力气永远一样大,方向永远相反。就像你坐在带轮子的椅子上,用力把一本书往前扔。书往前飞出去,椅子会往后退。没有人推你,你却动了——推你的,是你自己扔书这个动作。火箭也是同样的道理。它一直在往后扔东西,所以才能一直往前飞。",
+      "text": "火箭拦不住它,也不想拦。",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "解释",
-      "emotion": null
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "燃气哗一下往后冲了出去。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "这一冲,不是白冲的。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "燃气往后冲多大力气,火箭就被往前推多大力气。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "这两股力气永远一样大,方向永远相反。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "听起来像拔河!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "对,就像你坐在带轮子的椅子上,用力把一本书往前扔。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "书往前飞出去,椅子会往后退。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "没有人推你,你却动了。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "推你的,是你自己扔书这个动作。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "火箭也是这样?",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "对,它一直在往后扔东西,所以才能一直往前飞。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "flip",
       "text": "你以为怪的是没有地面蹬。其实怪的是——它压根不需要蹬,自己扔自己就能往前!",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "翻转",
-      "emotion": "若有所思"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "retell",
       "text": "火箭不是蹬地面飞起来的。是自己往后扔东西,靠反作用力往前冲。",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "转述句",
-      "emotion": "轻松收尾"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "好啦,今天就聊到这儿。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "下次玩气球撒气,可以想想这个道理!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "preview",
-      "text": "明天,我们清点一下:这一周,你记住了几件?",
+      "text": "明天,我们清点一下。",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "明日预告",
-      "emotion": "轻松收尾"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "preview",
+      "text": "这一周,你记住了几件?我们明天见!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
     }
   ],
   "waived_rules": []

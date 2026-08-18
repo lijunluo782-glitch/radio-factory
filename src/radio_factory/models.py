@@ -134,6 +134,9 @@ class Channel(BaseModel):
     redlines: list[str] = Field(default_factory=list)
     emotion_map: dict[str, str] = Field(default_factory=dict)  # step 名 -> 情绪标签,覆盖默认表
     turn_gap_ms: int | None = None  # 换人说话的默认间隔,覆盖 script.py 的 DEFAULT_TURN_GAP_MS;不写就用通用基线
+    hosts: dict[str, dict] = Field(default_factory=dict)  # 主持人 id -> {name, voice_id, speed, vol, pitch, role}
+    # 主持人是频道自己的身份,不进 voices.yaml(那张表是跨频道共享的音色资源池)。
+    # 每个频道自己的主持人自己定,换频道就换人——不是同一批人主持所有节目。
 
     def slot_for(self, weekday: int) -> Slot | None:
         return next((s for s in self.slots if s.weekday == weekday), None)

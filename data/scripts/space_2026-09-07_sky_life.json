@@ -15,21 +15,39 @@
     },
     {
       "kind": "announce",
-      "text": "新的一周开始啦,天上的日子——今天想问你一件事:宇航员的柜子里,到底能不能找到面包?",
+      "text": "大家好,我是陈果!",
       "seconds": null,
       "asset": null,
-      "voice": null,
+      "voice": "chenguo",
       "step": "",
-      "emotion": null
+      "emotion": "happy"
+    },
+    {
+      "kind": "announce",
+      "text": "我是多多!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "announce",
+      "text": "礼拜一,天上的日子到点了。今天想问你一件事:宇航员的面包都去哪儿了?",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "vo",
       "text": "你现在飘在国际空间站里,拉开厨房的柜子。你猜猜看,里面会有面包吗?",
       "seconds": null,
       "asset": null,
-      "voice": null,
+      "voice": "chenguo",
       "step": "",
-      "emotion": null
+      "emotion": "surprised"
     },
     {
       "kind": "silence",
@@ -42,21 +60,39 @@
     },
     {
       "kind": "vo",
-      "text": "没有。一片都没有。馒头?吐司?三明治?想都别想。讲真,这条规矩我第一次听说的时候,还以为是宇航员挑食。结果不是。是因为——一片面包,能把整个空间站搞得鸡飞狗跳。",
+      "text": "没有,一片都没有。馒头、吐司、三明治,统统不会出现在宇航员的餐盘上。",
       "seconds": null,
       "asset": null,
-      "voice": null,
+      "voice": "chenguo",
       "step": "",
-      "emotion": null
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "啊?为什么啊?宇航员不爱吃面包吗?",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "还真不是挑食,是因为一片面包,能把整个空间站搞得鸡飞狗跳。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "vo",
       "text": "一片面包,到底能捅出什么篓子?",
       "seconds": null,
       "asset": null,
-      "voice": null,
+      "voice": "duoduo",
       "step": "",
-      "emotion": null
+      "emotion": "surprised"
     },
     {
       "kind": "silence",
@@ -69,12 +105,30 @@
     },
     {
       "kind": "vo",
-      "text": "你先猜一猜——饼干渣掉在地上,会怎么样?简单,对吧?弯腰一捡,它就乖乖回你手心里,老实得很。换成太空舱里呢?",
+      "text": "你先猜一猜——饼干渣掉在地上,会怎么样?",
       "seconds": null,
       "asset": null,
-      "voice": null,
+      "voice": "chenguo",
       "step": "",
-      "emotion": null
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "简单啊,弯腰一捡,它就乖乖回我手心里了。",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "对。那换成太空舱里呢?",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "silence",
@@ -87,30 +141,129 @@
     },
     {
       "kind": "vo",
-      "text": "你猜对了吗?我跟你说,答案离谱到我第一次听都愣住了。它压根不往下掉。就那么飘着。像你抓了一把彩色纸屑扔向空中,风一吹,愣是不落地。晃晃悠悠,绕着你转圈。",
+      "text": "呃,我猜也是捡起来?",
       "seconds": null,
       "asset": null,
-      "voice": null,
+      "voice": "duoduo",
       "step": "",
-      "emotion": null
+      "emotion": "surprised"
     },
     {
       "kind": "vo",
-      "text": "对,我就爱这样,怎么了?",
+      "text": "猜错咯,什么都不会发生,它压根不往下掉。",
       "seconds": null,
       "asset": null,
-      "voice": "crumb",
+      "voice": "chenguo",
       "step": "",
-      "emotion": "略带调侃"
+      "emotion": "happy"
     },
     {
       "kind": "vo",
-      "text": "你听听,它还挺得意。可这份得意,能把整艘空间站都搭进去。它可能一头扎进你眼睛,痒得你直揉;可能钻进鼻子,呛得你喷嚏连天;运气最差,一头卡进仪器缝隙,让空间站跟着闹脾气。这感觉,你懂吧?打游戏打到最关键一下,手柄突然卡机。那种想把手柄摔出去的崩溃感。不信你自己试试。弹一下手指,想象那颗渣不往下掉,反而懒洋洋飘在你眼前。",
+      "text": "就那么飘着。",
       "seconds": null,
       "asset": null,
-      "voice": null,
+      "voice": "chenguo",
       "step": "",
-      "emotion": null
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "像你抓了一把彩色纸屑扔向空中,风一吹,愣是不落地。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "晃晃悠悠绕着你转圈。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "听着还怪好玩的?",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "好玩是好玩。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "可它接下来去哪儿,谁也说不准。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "扎进你眼睛,痒得直揉;钻进鼻子,呛得喷嚏连天;运气最差,一头卡进仪器缝隙,让空间站跟着闹脾气。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "这也太崩溃了吧。",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "跟打游戏打到最关键一下,手柄突然卡机,一个感觉。",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "对,就是那种想把手柄摔出去的崩溃感。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "不信你自己试试。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "弹一下手指,想象那颗渣不往下掉,反而懒洋洋飘在你眼前。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "silence",
@@ -123,48 +276,102 @@
     },
     {
       "kind": "vo",
-      "text": "你越想赶,它越不走。气人吧?宇航员被这些捣蛋鬼折腾出了一个绝招。放慢动作,嘴巴凑近一点,小口小口地咬。",
+      "text": "你越想赶,它越不走。",
       "seconds": null,
       "asset": null,
-      "voice": null,
+      "voice": "chenguo",
       "step": "",
-      "emotion": null
+      "emotion": "happy"
     },
     {
       "kind": "vo",
-      "text": "算你们聪明。",
+      "text": "气人!",
       "seconds": null,
       "asset": null,
-      "voice": "crumb",
+      "voice": "duoduo",
       "step": "",
-      "emotion": "略带调侃"
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "宇航员被这些捣蛋鬼折腾出了一个绝招。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "放慢动作,嘴巴凑近一点,小口小口地咬。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "算他们聪明。",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "flip",
       "text": "你以为,天上不能带面包,已经够奇怪了。其实更奇怪的是——连一粒面包渣,都能被当成危险品!",
       "seconds": null,
       "asset": null,
-      "voice": null,
+      "voice": "chenguo",
       "step": "",
-      "emotion": null
+      "emotion": "surprised"
     },
     {
       "kind": "retell",
       "text": "面包会掉渣,渣渣飘起来堵住仪器。或被吸进肺里,所以太空里禁止带面包。",
       "seconds": null,
       "asset": null,
-      "voice": null,
+      "voice": "chenguo",
       "step": "",
-      "emotion": null
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "好啦,今天就聊到这儿。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "今天学到的,记得讲给朋友听!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "preview",
-      "text": "明天,我们当一次实验室的破坏王:声音在没有空气的地方,还跑得动吗?",
+      "text": "明天,我们当一次实验室的破坏王。",
       "seconds": null,
       "asset": null,
-      "voice": null,
+      "voice": "chenguo",
       "step": "",
-      "emotion": null
+      "emotion": "happy"
+    },
+    {
+      "kind": "preview",
+      "text": "声音在没有空气的地方,还跑得动吗?我们明天见!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
     }
   ],
   "waived_rules": []

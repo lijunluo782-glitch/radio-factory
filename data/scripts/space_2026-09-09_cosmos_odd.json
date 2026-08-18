@@ -10,35 +10,80 @@
       "seconds": 3.0,
       "asset": "wed",
       "voice": null,
-      "step": "声音标识",
+      "step": "",
       "emotion": null
     },
     {
       "kind": "announce",
-      "text": "周三,一周过了一半,宇宙怪事时间到——今天问你一句:开车去月球,得开多久?",
+      "text": "大家好,我是陈果!",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "开场白",
-      "emotion": "好奇开场"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "announce",
+      "text": "我是多多!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "announce",
+      "text": "周三,一周过了一半,宇宙怪事时间到。今天问你一句:开车去月球,得开多久?",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "vo",
-      "text": "从地球开车到月球,一路不停。你猜要开多久?一小时?一天?一星期?都不对。要一直开,开满166天。160天,差不多是半年。这还是一路不停车的算法。",
+      "text": "从地球开车到月球,一路不停,你猜要开多久?",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "现象",
-      "emotion": "好奇开场"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "一小时?一天?一星期?",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "都不对,要一直开,开满166天。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "差不多是半年,这还是一路不停车的算法。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "vo",
       "text": "166天,到底有多久?",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "反问",
-      "emotion": "略带调侃"
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "silence",
@@ -46,62 +91,134 @@
       "seconds": 2.0,
       "asset": null,
       "voice": null,
-      "step": "留白",
-      "emotion": null
-    },
-    {
-      "kind": "vo",
-      "text": "暑假放假,一般是60天左右,166天差不多是快三个暑假。放完第一个暑假,你玩腻了。放完第二个暑假,你玩腻了两次。还剩下大半个暑假,车还在路上,月亮还没到。",
-      "seconds": null,
-      "asset": null,
-      "voice": null,
-      "step": "解释",
-      "emotion": null
-    },
-    {
-      "kind": "vo",
-      "text": "你们还没到啊?",
-      "seconds": null,
-      "asset": null,
-      "voice": "crumb",
       "step": "",
-      "emotion": "略带调侃"
+      "emotion": null
     },
     {
       "kind": "vo",
-      "text": "没到。你家到最近的城市,可能也就几十公里。地球到月亮,差不多是38万公里,相当于来回跑这段路一万次。下次抬头看月亮,它其实没那么近。",
+      "text": "暑假放假,一般是60天左右,166天差不多是快三个暑假。",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "解释",
-      "emotion": null
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "放完第一个暑假,肯定玩腻了!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "放完第二个暑假,你玩腻了两次。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "还剩下大半个暑假,车还在路上,月亮还没到。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "啊?这么慢!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "没到。你家到最近的城市,可能也就几十公里。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "地球到月亮,差不多是38万公里,相当于来回跑这段路一万次。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
+    },
+    {
+      "kind": "vo",
+      "text": "一万次?!下次抬头看月亮,它其实没那么近啊。",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "flip",
       "text": "你以为怪的是月球很远。其实怪的是——远到开车这个词在这儿根本不管用!",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "翻转",
-      "emotion": "若有所思"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "surprised"
     },
     {
       "kind": "retell",
       "text": "开车去月球,要开166天,比放三个暑假还久。一直不停车才行。",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "转述句",
-      "emotion": "轻松收尾"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "好啦,今天就聊到这儿。",
+      "seconds": null,
+      "asset": null,
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "vo",
+      "text": "下次想去月球玩,还是坐火箭比较快!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
     },
     {
       "kind": "preview",
-      "text": "明天,我们认识一个人。第一个飞上天的人,前一晚在想什么?",
+      "text": "明天,我们认识一个人。",
       "seconds": null,
       "asset": null,
-      "voice": null,
-      "step": "明日预告",
-      "emotion": "轻松收尾"
+      "voice": "chenguo",
+      "step": "",
+      "emotion": "happy"
+    },
+    {
+      "kind": "preview",
+      "text": "第一个飞上天的人,前一晚在想什么?我们明天见!",
+      "seconds": null,
+      "asset": null,
+      "voice": "duoduo",
+      "step": "",
+      "emotion": "happy"
     }
   ],
   "waived_rules": []
