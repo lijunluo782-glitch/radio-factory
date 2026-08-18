@@ -5,11 +5,12 @@
 # 这张表把角色 id 映射到 MiniMax 实际的 voice_id + 默认语速/音量/音高,
 # 给 script.py 的 tts_tasks() 用。
 #
-# 依据:MiniMax T2A API(platform.minimax.io/docs/api-reference/speech-t2a-http),
-# 系统音色列表见 platform.minimax.io/docs/faq/system-voice-id。
-# 下面的 voice_id 是照公开文档选的型,不是拿真实 key 跑过的——接入时账号里
-# 未必有一模一样的名字(MiniMax 迭代过命名,新老账号能看到的音色表不一定一致),
-# 第一次真跑之前务必用你的 API key 调一次音色列表接口核对,选型不等于核验。
+# 依据:MiniMax T2A API(platform.minimax.io/docs/api-reference/speech-t2a-http)。
+# 2026-08-17 用真实 API key 跑过 `rf voices` 核验过一遍(公司中转账号,
+# 走的是 api.minimax.chat 这个国内域名,不是 api.minimax.io)——
+# CrispGirl/SoftGirl 当时是照公开文档瞎猜的写法,实际账号里的真名带下划线
+# (Crisp_Girl / Soft_Girl),已经改过来。narrator / crumb / salt 三个当时就猜对了。
+# 换账号或者 MiniMax 改名字之后,记得重新跑一遍 `rf voices` 核对。
 
 narrator:
   voice_id: "Chinese (Mandarin)_Radio_Host"
@@ -28,7 +29,7 @@ characters:
     pitch: 0
     note: 直来直去、有点犟——面包渣/盐粒这类"死不悔改"的调皮物件用这个
   bubble:
-    voice_id: "Chinese (Mandarin)_CrispGirl"
+    voice_id: "Chinese (Mandarin)_Crisp_Girl"
     speed: 1.1
     vol: 1.0
     pitch: 0
@@ -40,7 +41,7 @@ characters:
     pitch: 0
     note: 大大咧咧、嗓门大——适合喊冤/抗议
   nose:
-    voice_id: "Chinese (Mandarin)_SoftGirl"
+    voice_id: "Chinese (Mandarin)_Soft_Girl"
     speed: 0.95
     vol: 1.0
     pitch: 0
