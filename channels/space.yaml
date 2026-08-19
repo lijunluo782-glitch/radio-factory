@@ -67,6 +67,11 @@ stings:
     duration_s: 3.0
     params: {bpm: 100.0, f: 660.0}
     note: 五声,对应五件事
+  - id: sun
+    kind: chime
+    duration_s: 3.0
+    params: {f: 740.0}
+    note: 暖一点的信箱提示音,呼应"收到一封信"——跟其他六天的机械感区分开
 
 # ---------------------------------------------------------------- 排播
 # announce / tagline 是排播预览参考文案(rf rundown、dashboard 显示用),
@@ -229,9 +234,23 @@ slots:
           - {id: recap, name: 五件事浓缩, target_pool: 0}
 
   - weekday: 7
-    domain: 留空 · 自由收听
-    mode: "off"
-    programs: []
+    domain: 信箱 · 有人问
+    announce: "这周,收到了一个新问题。"
+    sting: sun
+    duration_min: 3.0
+    mode: fixed
+    programs:
+      - id: mailbox
+        name: 陈果多多信箱
+        # 不单开新的知识领域,复用一到五已经证明能过三关测试的素材,
+        # 换一层"有人问了这个问题"的外壳——多多念问题(她本来就是"替听众问"
+        # 的角色),陈果来答。目的是让周一到周五的知识型基调,在周日
+        # 换成对话型,不是再加一个讲课日。
+        categories:
+          - {id: why, name: 为什么问题, target_pool: 12, example: 为什么宇航员不能挠痒痒}
+          - {id: howcome, name: 怎么会问题, target_pool: 10, example: 火箭为什么造成尖的不是圆的}
+          - {id: compare, name: 哪个更问题, target_pool: 8, example: 月亮和太阳哪个更烫}
+          - {id: canwe, name: 能不能问题, target_pool: 10, example: 能不能在太空里哭出眼泪}
 
 # ---------------------------------------------------------------- 情绪/音色映射
 # step 名 -> TTS 情绪标签。skeleton() 生成脚本时按这张表自动填 Segment.emotion,

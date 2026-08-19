@@ -201,6 +201,19 @@ def synthesize(channel: str, path: str, out: str = typer.Option(None, help="输�
 
 
 @app.command()
+def assemble(channel: str, path: str, tts_dir: str, out: str = typer.Option(None, help="输出文件,默认跟 tts_dir 同级")):
+    """把 rf synthesize 产出的分段 mp3 拼成一整期:插入真实静音、句间交叉淡化、响度拉平。"""
+    from .audio import stitch
+
+    ch = load_channel(channel)
+    s = script_mod.load(Path(path))
+    d = Path(tts_dir)
+    o = Path(out) if out else d.parent / f"{d.name}_assembled.mp3"
+    result = stitch.stitch_script(s, ch, d, o)
+    console.print(f"[green]完成[/green] {result}")
+
+
+@app.command()
 def screen(channel: str):
     """选题准入检查:转述句、翻转句、只有耳朵能得到的东西。"""
     tps = topics_mod.load_topics(channel)

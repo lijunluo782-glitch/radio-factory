@@ -124,10 +124,22 @@ def screen(t: Topic) -> list[str]:
     return problems
 
 
-def pick(topics: list[Topic], program: str, n: int = 5) -> list[Topic]:
-    """从池子里挑下一批,优先挑已过筛的。"""
+def pick(topics: list[Topic], program: str, n: int = 5, avoid_recent: int = 2) -> list[Topic]:
+    """从池子里挑下一批。
+
+    排序优先级:1) 不要撞最近几期用过的类目(粗筛,不是万能——真正的"手法别
+    重样"要看脚本怎么写,这里只挡得住最表面的"类目撞车") 2) 三关测试问题少的
+    优先 3) 查证来源多的优先。"recent" 看的是同一节目里已经排了播出日的选题,
+    不分是否已经真播出过。
+    """
     cands = [t for t in topics if t.program == program and t.status == "pool"]
-    cands.sort(key=lambda t: (len(screen(t)), -len(t.sources)))
+    scheduled = sorted(
+        (t for t in topics if t.program == program and t.air_date is not None),
+        key=lambda t: t.air_date,
+        reverse=True,
+    )
+    recent_categories = {t.category for t in scheduled[:avoid_recent]}
+    cands.sort(key=lambda t: (t.category in recent_categories, len(screen(t)), -len(t.sources)))
     return cands[:n]
 
 

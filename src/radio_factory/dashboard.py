@@ -73,7 +73,6 @@ aside{width:246px;flex:none;background:var(--sidebar);color:var(--sidebar-text);
 .navitem{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;
   border-radius:var(--radius-sm);color:var(--sidebar-text);text-decoration:none;font-size:13.5px;
   font-weight:600;transition:transform .12s ease}
-.navitem-icon{margin-right:7px}
 .navitem:hover{background:var(--sidebar-badge);transform:translateX(1px)}
 .navitem.active{background:var(--item-accent,var(--accent));color:#fff}
 .navitem.active[data-key="topics"]{--item-accent:var(--c-topics)}
@@ -179,10 +178,10 @@ def _esc(v) -> str:
 # ------------------------------------------------------------ 侧栏
 
 _PAGES = [
-    ("topics", "📝", "选题清单"),
-    ("scripts", "🎬", "脚本质检"),
-    ("rundown", "📅", "排播表"),
-    ("", "🏡", "总览 · 体检与红线"),
+    ("topics", "选题清单"),
+    ("scripts", "脚本质检"),
+    ("rundown", "排播表"),
+    ("", "总览 · 体检与红线"),
 ]
 
 RUNDOWN_DEFAULT_DAYS = 21
@@ -203,10 +202,10 @@ def _qc_status(ch: Channel, s: Script) -> tuple[str, str, list]:
     errors = [f for f in active if f.severity == "error"]
     warns = [f for f in active if f.severity == "warn"]
     if errors:
-        return "tag-alarm", f"🚫 {len(errors)} 个错误", findings
+        return "tag-alarm", f"{len(errors)} 个错误", findings
     if warns:
-        return "tag-warn", f"⚠️ {len(warns)} 个警告", findings
-    return "tag-ok", "✅ 全部通过", findings
+        return "tag-warn", f"{len(warns)} 个警告", findings
+    return "tag-ok", "全部通过", findings
 
 
 def _pending_scripts(ch: Channel) -> int:
@@ -245,8 +244,7 @@ def _sidebar(channel_id: str, page: str, topics: list[Topic], ch: Channel) -> st
         '<select class="chswitch-select" onchange="location.href=this.value">'
         f'{"".join(opts)}</select>'
     )
-    icons = {key: icon for key, icon, _ in _PAGES}
-    labels = {key: label for key, _, label in _PAGES}
+    labels = {key: label for key, label in _PAGES}
     counts = {
         "topics": _pending_topics(topics),
         "scripts": _pending_scripts(ch),
@@ -260,19 +258,19 @@ def _sidebar(channel_id: str, page: str, topics: list[Topic], ch: Channel) -> st
         cls = "navcount" + ("" if n else " zero")
         group1.append(
             f'<a class="navitem {active}" data-key="{key}" href="/{channel_id}/{key}">'
-            f'<span><span class="navitem-icon">{icons[key]}</span>{_esc(labels[key])}</span>'
+            f'<span>{_esc(labels[key])}</span>'
             f'<span class="{cls}">{n}</span></a>'
         )
     group2 = [
         f'<a class="navitem {"active" if page == "" else ""}" data-key="" href="/{channel_id}">'
-        f'<span class="navitem-icon">{icons[""]}</span>{_esc(labels[""])}</a>'
+        f'{_esc(labels[""])}</a>'
     ]
     return f"""<aside>
   <div class="brand">
     <div class="brand-badge">{_esc(ch.name[:2])}</div>
     <div>
       <div class="brand-name">{_esc(ch.name)}</div>
-      <div class="brand-sub">🧸 内容工作台</div>
+      <div class="brand-sub">内容工作台</div>
     </div>
   </div>
   <div class="chswitch">{channel_select}</div>
@@ -286,7 +284,7 @@ def _shell(channel_id: str, page: str, title: str, sub: str, body: str) -> str:
     topics = topics_mod.load_topics(channel_id)
     return f"""<!doctype html>
 <html lang="zh"><head><meta charset="utf-8">
-<title>🎈 工作台 · {_esc(ch.name)}</title>
+<title>工作台 · {_esc(ch.name)}</title>
 <style>{CSS}</style>
 </head><body>
 <div class="shell">
@@ -297,7 +295,7 @@ def _shell(channel_id: str, page: str, title: str, sub: str, body: str) -> str:
   {body}
 </main>
 </div>
-<footer class="muted">🧸 数据每次刷新都重新读盘 —— 操作即写回 data/*.json,不额外存状态。</footer>
+<footer class="muted">数据每次刷新都重新读盘 —— 操作即写回 data/*.json,不额外存状态。</footer>
 </body></html>"""
 
 
@@ -307,17 +305,17 @@ def _shell(channel_id: str, page: str, title: str, sub: str, body: str) -> str:
 def _health_section(channel_id: str, ch: Channel, topics: list[Topic]) -> str:
     rows = topics_mod.health(ch, topics)
     if not rows:
-        return "<div class='empty'>🌱 这个频道还没有配置消耗节目。</div>"
+        return "<div class='empty'>这个频道还没有配置消耗节目。</div>"
     cards = []
     for r in rows:
         pct = 100.0 if r.weeks_left == float("inf") else min(r.weeks_left / 40 * 100, 100)
         bar_cls = "bar-alarm" if r.alarm else "bar-ok"
         left = "∞" if r.weeks_left == float("inf") else f"{r.weeks_left:.0f}"
-        tag_cls, tag_txt = ("tag-alarm", "🚨 报警") if r.alarm else ("tag-ok", "🌟 正常")
+        tag_cls, tag_txt = ("tag-alarm", "报警") if r.alarm else ("tag-ok", "正常")
         reasons = "、".join(r.reasons) if r.reasons else "储量健康,先不用管"
         cards.append(
             f"""<div class="statcard">
-      <div class="statcard-head"><span class="statcard-title">🎙️
+      <div class="statcard-head"><span class="statcard-title">
         <a href="/{channel_id}/topics?program={_esc(r.program)}" title="查看这档节目的选题">{_esc(r.name)}</a></span>
         <span class="tag {tag_cls}">{tag_txt}</span></div>
       <div class="statcard-num">{r.available}<small> / {r.target} 条储量 · 年耗 {r.per_year:.0f}</small></div>
@@ -329,16 +327,50 @@ def _health_section(channel_id: str, ch: Channel, topics: list[Topic]) -> str:
     return f"<div class='cardgrid'>{''.join(cards)}</div>"
 
 
-def _rundown_section(ch: Channel) -> str:
+def _announce_text(channel_id: str, ch: Channel, a) -> tuple[str, bool]:
+    """开场白展示文本,返回 (文本, 是否来自真实脚本)。
+
+    开场白现在是每期手写的多主持人对话(见 script.skeleton 里的注释),不再是
+    频道模板套出来的固定句子 —— 已经有脚本的日子必须读脚本里真实写的那几句,
+    模板值只用来给还没写脚本的日子做占位预览,两者绝不能混着展示成一回事。
+    """
+    if a.program:
+        path = _script_path(channel_id, a.air_date, a.program.id)
+        if path.is_file():
+            try:
+                s = script_mod.load(path)
+            except Exception:
+                s = None
+            if s is not None:
+                lines = []
+                for seg in s.segments:
+                    if seg.kind != "announce":
+                        if lines:
+                            break
+                        continue
+                    if not seg.text.strip():
+                        continue
+                    speaker = ch.hosts.get(seg.voice, {}).get("name") if seg.voice else None
+                    lines.append(f"{speaker}:{seg.text}" if speaker else seg.text)
+                if lines:
+                    return " ".join(lines), True
+    return open_line(ch, a), False
+
+
+def _rundown_section(channel_id: str, ch: Channel) -> str:
     airs = rundown(ch, date.today(), 14)
     if not airs:
-        return "<div class='empty'>📭 接下来 14 天没有排播。</div>"
+        return "<div class='empty'>接下来 14 天没有排播。</div>"
     body = []
     for a in airs:
         name = a.program.name if a.program else a.slot.domain
+        text, is_real = _announce_text(channel_id, ch, a)
+        cell = _esc(text)
+        if not is_real:
+            cell += " <span class='tag tag-status'>模板占位</span>"
         body.append(
             f"<tr><td>{a.air_date}</td><td>{_esc(ch.weekday_names[a.weekday - 1])}</td>"
-            f"<td>{_esc(name)}</td><td>{_esc(open_line(ch, a))}</td></tr>"
+            f"<td>{_esc(name)}</td><td>{cell}</td></tr>"
         )
     return (
         "<table><thead><tr><th>日期</th><th>星期</th><th>节目</th><th>开场白</th></tr></thead>"
@@ -350,14 +382,14 @@ def page_overview(channel_id: str) -> str:
     ch = load_channel(channel_id)
     topics = topics_mod.load_topics(channel_id)
     body = f"""
-  <section><h2>🌱 选题池体检</h2>{_health_section(channel_id, ch, topics)}</section>
-  <section><h2>📅 未来 14 天排播 <a href="/{channel_id}/rundown">→ 去排播表指定选题 / 生成骨架</a></h2>
-    {_rundown_section(ch)}</section>
-  <section><h2>🚫 红线参考</h2>
+  <section><h2>选题池体检</h2>{_health_section(channel_id, ch, topics)}</section>
+  <section><h2>未来 14 天排播 <a href="/{channel_id}/rundown">→ 去排播表指定选题 / 生成骨架</a></h2>
+    {_rundown_section(channel_id, ch)}</section>
+  <section><h2>红线参考</h2>
     <table><tbody>{''.join(f"<tr><td>{_esc(r)}</td></tr>" for r in ch.redlines)}</tbody></table>
   </section>
 """
-    return _shell(channel_id, "", "🏡 总览", "选题池储量、红线参考 —— 只读", body)
+    return _shell(channel_id, "", "总览", "选题池储量、红线参考 —— 只读", body)
 
 
 # ------------------------------------------------------------ 选题清单页
@@ -365,7 +397,7 @@ def page_overview(channel_id: str) -> str:
 
 def _topic_row(t: Topic) -> str:
     probs = topics_mod.screen(t)
-    tag_cls, tag_txt = ("tag-ok", "✅ 通过") if not probs else ("tag-warn", "📝 待补")
+    tag_cls, tag_txt = ("tag-ok", "通过") if not probs else ("tag-warn", "待补")
     reason = "; ".join(probs) if probs else "—"
     nxt = topics_mod.next_status(t.status)
     actions = []
@@ -374,14 +406,14 @@ def _topic_row(t: Topic) -> str:
             f'<form class="inline" method="post" action="/{t.channel}/topics/status">'
             f'<input type="hidden" name="id" value="{_esc(t.id)}">'
             f'<input type="hidden" name="status" value="{_esc(nxt)}">'
-            f'<button class="primary" type="submit">🚀 推进→{_esc(nxt)}</button></form>'
+            f'<button class="primary" type="submit">推进→{_esc(nxt)}</button></form>'
         )
     if t.status not in ("aired", "killed"):
         actions.append(
             f'<form class="inline" method="post" action="/{t.channel}/topics/status">'
             f'<input type="hidden" name="id" value="{_esc(t.id)}">'
             f'<input type="hidden" name="status" value="killed">'
-            f'<button class="danger" type="submit">🗑️ 淘汰</button></form>'
+            f'<button class="danger" type="submit">淘汰</button></form>'
         )
     edit_form = f"""<details><summary>编辑</summary>
     <form class="editform" method="post" action="/{t.channel}/topics/edit">
@@ -394,7 +426,7 @@ def _topic_row(t: Topic) -> str:
       <select name="asset">
         {''.join(f'<option value="{v}" {"selected" if t.asset == v else ""}>{v}</option>' for v in ("none", "synth", "archive"))}
       </select>
-      <button class="primary" type="submit">💾 保存</button>
+      <button class="primary" type="submit">保存</button>
     </form></details>"""
     return (
         f"<tr><td><code>{_esc(t.id)}</code></td>"
@@ -427,7 +459,7 @@ def _topics_filter_bar(channel_id: str, ch: Channel, scoped: list[Topic], status
     if program:
         name = next((p.name for p in ch.programs if p.id == program), program)
         clear = f"/{channel_id}/topics" + (f"?status={status}" if status else "")
-        bar += f"<span class='filter-context'>🎙️ 只看:{_esc(name)} <a href='{clear}'>✕ 清除</a></span>"
+        bar += f"<span class='filter-context'>只看:{_esc(name)} <a href='{clear}'>清除</a></span>"
     return bar + "</div>"
 
 
@@ -435,13 +467,13 @@ def page_topics(channel_id: str, status: str | None = None, program: str | None 
     ch = load_channel(channel_id)
     all_topics = topics_mod.load_topics(channel_id)
     if not all_topics:
-        body = "<div class='empty'>🌱 选题池是空的,先去补几条选题吧。</div>"
+        body = "<div class='empty'>选题池是空的,先去补几条选题吧。</div>"
     else:
         scoped = [t for t in all_topics if not program or t.program == program]
         shown = [t for t in scoped if not status or t.status == status]
         filterbar = _topics_filter_bar(channel_id, ch, scoped, status, program)
         if not shown:
-            body = filterbar + "<div class='empty'>🔍 这个筛选条件下没有选题。</div>"
+            body = filterbar + "<div class='empty'>这个筛选条件下没有选题。</div>"
         else:
             ordered = sorted(shown, key=lambda t: _STATUS_ORDER.index(t.status) if t.status in _STATUS_ORDER else 99)
             rows = "".join(_topic_row(t) for t in ordered)
@@ -452,7 +484,7 @@ def page_topics(channel_id: str, status: str | None = None, program: str | None 
             )
             body = filterbar + table
     return _shell(
-        channel_id, "topics", "📝 选题清单",
+        channel_id, "topics", "选题清单",
         "推进状态、淘汰、或直接补全「待补」的字段 —— 保存后自动重新过三关测试",
         f"<section>{body}</section>",
     )
@@ -467,7 +499,7 @@ def _finding_row(script_path: Path, s: Script, f) -> str:
     action = ""
     if f.severity == "warn":
         op = "unwaive" if waived else "waive"
-        label = "↩️ 取消忽略" if waived else "🙈 忽略"
+        label = "取消忽略" if waived else "忽略"
         action = (
             f'<form class="inline" method="post" action="/{s.channel}/scripts/waive">'
             f'<input type="hidden" name="file" value="{_esc(script_path.name)}">'
@@ -483,17 +515,13 @@ def _finding_row(script_path: Path, s: Script, f) -> str:
     )
 
 
-_SEG_ICONS = {"sting": "🔔", "announce": "📣", "vo": "🎙️", "silence": "🤫", "sfx": "🔊"}
-
-
 def _segment_editor(script_path: Path, s: Script) -> str:
     cards = []
     for i, seg in enumerate(s.segments):
-        icon = _SEG_ICONS.get(seg.kind, "📝")
         if seg.kind in ("sting", "sfx", "silence"):
             cards.append(
                 f"""<div class="segcard">
-      <div class="segcard-head"><span class="segcard-idx">{i}</span>{icon} {_esc(seg.kind)}
+      <div class="segcard-head"><span class="segcard-idx">{i}</span>{_esc(seg.kind)}
         <span>· {seg.est_seconds}s</span></div>
       <div class="segcard-fixed">{_esc(seg.asset or '固定素材,无文本')}</div>
     </div>"""
@@ -501,19 +529,19 @@ def _segment_editor(script_path: Path, s: Script) -> str:
             continue
         cards.append(
             f"""<div class="segcard">
-      <div class="segcard-head"><span class="segcard-idx">{i}</span>{icon} {_esc(seg.kind)}</div>
+      <div class="segcard-head"><span class="segcard-idx">{i}</span>{_esc(seg.kind)}</div>
       <form method="post" action="/{s.channel}/scripts/segment">
         <input type="hidden" name="file" value="{_esc(script_path.name)}">
         <input type="hidden" name="index" value="{i}">
         <textarea name="text">{_esc(seg.text)}</textarea>
-        <button class="primary" type="submit">💾 保存</button>
+        <button class="primary" type="submit">保存</button>
       </form>
     </div>"""
         )
     return f"<div class='seclist'>{''.join(cards)}</div>"
 
 
-_SCRIPT_FILTER_LABELS = [("alarm", "🚫 有错误"), ("warn", "⚠️ 有警告"), ("ok", "✅ 全部通过")]
+_SCRIPT_FILTER_LABELS = [("alarm", "有错误"), ("warn", "有警告"), ("ok", "全部通过")]
 
 
 def page_scripts(channel_id: str, status: str | None = None) -> str:
@@ -531,7 +559,7 @@ def page_scripts(channel_id: str, status: str | None = None) -> str:
         loaded.append((p, s, tag_cls, tag_txt, findings, key))
 
     if not paths:
-        body = "<div class='empty'>🎬 还没有脚本,先去排播表生成一个骨架吧。</div>"
+        body = "<div class='empty'>还没有脚本,先去排播表生成一个骨架吧。</div>"
     else:
         def chip(label: str, key: str | None, count: int) -> str:
             active = "active" if status == key else ""
@@ -545,21 +573,21 @@ def page_scripts(channel_id: str, status: str | None = None) -> str:
         shown = [row for row in loaded if not status or row[5] == status]
         blocks = list(error_blocks) if not status else []
         for p, s, tag_cls, tag_txt, findings, _key in shown:
-            findings_html = "".join(_finding_row(p, s, f) for f in findings) or "<p class='muted'>🎉 无质检项。</p>"
+            findings_html = "".join(_finding_row(p, s, f) for f in findings) or "<p class='muted'>无质检项。</p>"
             blocks.append(
                 f"""<section>
   <h2><code>{_esc(p.name)}</code> · {_esc(s.program)} · {s.air_date}
     <span class="tag {tag_cls}">{tag_txt}</span></h2>
-  <p class="muted">⏱️ {s.duration_s:.0f}s / {s.word_count} 字</p>
+  <p class="muted">{s.duration_s:.0f}s / {s.word_count} 字</p>
   <details open><summary>质检详情</summary>{findings_html}</details>
   <details><summary>编辑文本</summary>{_segment_editor(p, s)}</details>
 </section>"""
             )
         if not shown and not blocks:
-            blocks.append("<div class='empty'>🔍 这个筛选条件下没有脚本。</div>")
+            blocks.append("<div class='empty'>这个筛选条件下没有脚本。</div>")
         body = filterbar + "".join(blocks)
     return _shell(
-        channel_id, "scripts", "🎬 脚本质检",
+        channel_id, "scripts", "脚本质检",
         "error 级别必须改文本才能消掉;warn 级别人工复核后可以标记忽略",
         body,
     )
@@ -574,19 +602,19 @@ def _content_status(ch: Channel, channel_id: str, a, topics: list[Topic]) -> tup
     if not a.program:
         return "tag-status", "—"
     if a.slot.mode not in ("fixed", "rotate"):
-        return "tag-status", "🔁 重播 · 不占选题池"
+        return "tag-status", "重播 · 不占选题池"
     path = _script_path(channel_id, a.air_date, a.program.id)
     if path.is_file():
         try:
             s = script_mod.load(path)
         except Exception:
-            return "tag-alarm", "🚫 脚本读取失败"
+            return "tag-alarm", "脚本读取失败"
         tag_cls, tag_txt, _ = _qc_status(ch, s)
         return tag_cls, tag_txt
     has_topic = any(t.air_date == a.air_date and t.program == a.program.id for t in topics)
     if has_topic:
-        return "tag-warn", "🌟 已选题 · 待生成骨架"
-    return "tag-alarm", "❓ 未排期"
+        return "tag-warn", "已选题 · 待生成骨架"
+    return "tag-alarm", "未排期"
 
 
 def _rundown_row(ch: Channel, channel_id: str, a, topics: list[Topic]) -> str:
@@ -602,7 +630,7 @@ def _rundown_row(ch: Channel, channel_id: str, a, topics: list[Topic]) -> str:
         if assigned:
             assigned_title = _esc(assigned.title)
         if has_script:
-            actions = f'<a class="btn" href="/{channel_id}/scripts">🎬 去脚本质检 →</a>'
+            actions = f'<a class="btn" href="/{channel_id}/scripts">去脚本质检 →</a>'
         else:
             cands = [
                 t for t in topics
@@ -618,19 +646,19 @@ def _rundown_row(ch: Channel, channel_id: str, a, topics: list[Topic]) -> str:
         <input type="hidden" name="date" value="{a.air_date}">
         <input type="hidden" name="program" value="{a.program.id}">
         <select name="topic_id"><option value="">-- 选选题 --</option>{options}</select>
-        <button class="primary" type="submit">🎯 指定</button>
+        <button class="primary" type="submit">指定</button>
       </form>"""
             gen_form = ""
             if assigned:
                 gen_form = f"""<form class="inline" method="post" action="/{channel_id}/rundown/generate">
         <input type="hidden" name="date" value="{a.air_date}">
         <input type="hidden" name="program" value="{a.program.id}">
-        <button class="primary" type="submit">✨ 生成骨架</button>
+        <button class="primary" type="submit">生成骨架</button>
       </form>
       <form class="inline" method="post" action="/{channel_id}/rundown/unassign">
         <input type="hidden" name="date" value="{a.air_date}">
         <input type="hidden" name="program" value="{a.program.id}">
-        <button type="submit">↩️ 取消指定</button>
+        <button type="submit">取消指定</button>
       </form>"""
             actions = f"<div class='actions'>{assign_form}{gen_form}</div>"
     return (
@@ -648,7 +676,7 @@ def page_rundown(channel_id: str, start: date | None = None, days: int = RUNDOWN
     start = start or date.today()
     airs = rundown(ch, start, days)
     if not airs:
-        body = "<div class='empty'>📭 这个区间没有排播。</div>"
+        body = "<div class='empty'>这个区间没有排播。</div>"
     else:
         rows = "".join(_rundown_row(ch, channel_id, a, topics) for a in airs)
         body = (
@@ -663,10 +691,16 @@ def page_rundown(channel_id: str, start: date | None = None, days: int = RUNDOWN
         f"<a href='/{channel_id}/rundown?start={prev_start}&days={days}'>← 前 {days} 天</a>"
         f"<span class='muted'>{start} 起 {days} 天</span>"
         f"<a href='/{channel_id}/rundown?start={next_start}&days={days}'>后 {days} 天 →</a>"
+        f"<form class='inline' method='post' action='/{channel_id}/rundown/autoassign'>"
+        f"<input type='hidden' name='start' value='{start}'>"
+        f"<input type='hidden' name='days' value='{days}'>"
+        f"<button class='primary' type='submit'"
+        f" title='对这段区间里还没指定选题的日子,按&quot;不撞最近类目 + 越准备好越优先&quot;自动挑一条'>"
+        f"自动排播未指定的日子</button></form>"
         f"</div>"
     )
     return _shell(
-        channel_id, "rundown", "📅 排播表",
+        channel_id, "rundown", "排播表",
         "指定选题落到具体播出日、一键生成脚本骨架。“内容状态”读的是脚本文件是否存在/质检结果,"
         "不是假的生成中状态 —— 以后接入真实生成流程时,这一列直接切换成那边的真实进度",
         rangebar + body,
@@ -792,6 +826,36 @@ def act_rundown_generate(channel_id: str, form: dict) -> bool:
     return True
 
 
+def act_rundown_autoassign(channel_id: str, form: dict) -> bool:
+    """把这段区间里"该有选题但还没指定"的日子,自动挑一条钉上去。
+
+    调用 topics_mod.pick(),同一批里前面刚指定的日子会立刻计入"最近类目",
+    所以批量跑的时候,后面的日子也躲得开前面刚选过的类目 —— 不用分开跑
+    好几次才生效。
+    """
+    ch = load_channel(channel_id)
+    try:
+        start = date.fromisoformat(form["start"]) if form.get("start") else date.today()
+        days = int(form.get("days") or RUNDOWN_DEFAULT_DAYS)
+    except ValueError:
+        return False
+    topics = topics_mod.load_topics(channel_id)
+    changed = False
+    for a in rundown(ch, start, days):
+        if not a.program or a.slot.mode not in ("fixed", "rotate"):
+            continue
+        if any(t.air_date == a.air_date and t.program == a.program.id for t in topics):
+            continue
+        cands = topics_mod.pick(topics, a.program.id, n=1)
+        if not cands:
+            continue
+        cands[0].air_date = a.air_date
+        changed = True
+    if changed:
+        topics_mod.save_topics(channel_id, topics)
+    return True
+
+
 _ACTIONS = {
     ("topics", "status"): act_topic_status,
     ("topics", "edit"): act_topic_edit,
@@ -800,6 +864,7 @@ _ACTIONS = {
     ("rundown", "assign"): act_rundown_assign,
     ("rundown", "unassign"): act_rundown_unassign,
     ("rundown", "generate"): act_rundown_generate,
+    ("rundown", "autoassign"): act_rundown_autoassign,
 }
 
 

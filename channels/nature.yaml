@@ -65,6 +65,11 @@ stings:
     kind: metal
     duration_s: 3.0
     params: {strikes: 5, f: 900.0}
+  - id: sun
+    kind: sweep
+    duration_s: 3.0
+    params: {f0: 200.0, f1: 1200.0}
+    note: 六天里剩下唯一没用过的音色,给"听一段"留白式的上扬,呼应"竖起耳朵听"
 
 slots:
   - weekday: 1
@@ -180,9 +185,22 @@ slots:
           - {id: recap, name: 五件事浓缩, target_pool: 0}
 
   - weekday: 7
-    domain: 留空 · 自由收听
-    mode: "off"
-    programs: []
+    domain: 自然声音 · 听一段
+    announce: "这周,我们听一段真的声音。"
+    sting: sun
+    duration_min: 3.0
+    mode: fixed
+    programs:
+      - id: field_sound
+        name: 听一段
+        # 头部注释说的"自然录音门槛低于太空档案"落地在这——航天频道周日
+        # 只能靠对话复用旧素材(听不到真的太空声音),这个频道能直接放一段
+        # 真录音当"现象",demo/asset 三选一那关天然就过,不用另外造演示。
+        categories:
+          - {id: guess_who, name: 猜猜是谁, target_pool: 12, example: 这段沙沙声,是谁在动}
+          - {id: guess_where, name: 猜猜在哪, target_pool: 10, example: 这段哗哗声,是海边还是河边}
+          - {id: guess_when, name: 猜猜什么时候, target_pool: 8, example: 这段虫鸣,是白天还是晚上}
+          - {id: rare, name: 平时听不到的, target_pool: 10, example: 蚯蚓钻土的声音}
 
 # step 名 -> TTS 情绪标签。不写就整段用 script.py 里的 DEFAULT_EMOTION_BY_STEP,
 # 这里只需要写"跟通用基线不一样"的行 —— 本频道全部照搬默认值,只是把
